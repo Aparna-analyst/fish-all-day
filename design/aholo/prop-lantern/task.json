@@ -1,0 +1,17 @@
+{
+  "name": "prop-lantern",
+  "ref": "-",
+  "prompt": "A single cartoon old brass camping lantern with a glass chimney and a wire handle, a warm flame inside. Soft matte clay vinyl-toy style, chunky and cute, matching a cosy cartoon fishing game. The whole object alone, seen from a three-quarter front view slightly above, plain light grey background, soft even studio light, no shadow, no text, no logos, nothing else in the picture.",
+  "taskId": 8259842,
+  "secs": 39,
+  "result": {
+    "taskId": 8259842,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/731/e1b/d88f555c5beacb7f959af0396570fc934e1319aa.png"
+      }
+    ]
+  }
+}

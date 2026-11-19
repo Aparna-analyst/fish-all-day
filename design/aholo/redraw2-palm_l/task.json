@@ -1,0 +1,17 @@
+{
+  "name": "redraw2-palm_l",
+  "ref": "/Users/sid/Developer/Personal/desk-fishing-game/models/oldman/polish/palm_l-before.png",
+  "prompt": "Redraw this exact picture in the same soft 3D clay vinyl-toy style as the original, just cleaner and sharper: the palm of a cartoon hand seen from below. Keep the outline, size, position, angle and the same peach skin colour exactly, and the same plain grey background. No outlines, no line drawing, no realistic skin texture. Within the same outline shape three chubby rounded cartoon fingers and a thumb exactly where the bumps are now, with soft shallow creases between the fingers and at each joint, and two soft palm lines. Smooth matte clay surface. Flat even light with no shadows, exactly like the original picture. No text.",
+  "taskId": 8260126,
+  "secs": 53,
+  "result": {
+    "taskId": 8260126,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/e62/5a0/e39cb773a43b971e737ce44af48a34ed101363fc.png"
+      }
+    ]
+  }
+}

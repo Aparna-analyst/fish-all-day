@@ -1,0 +1,17 @@
+{
+  "name": "toy-cooler",
+  "ref": "/Users/sid/Developer/Personal/desk-fishing-game/design/aholo/oldman-tb/oldman-tb.png",
+  "prompt": "A single cooler box, closed, sky blue with a white lid and a white carry handle, very rounded corners. Draw it in exactly the same style as the reference picture: soft rounded cartoon clay vinyl-toy shapes, chunky toy proportions, simple matte painted materials, gentle warm colours. Only the object, not the man. The whole object alone, three-quarter front view from slightly above, plain light grey background, soft even studio light, no shadow, no text, no logos, nothing else in the picture.",
+  "taskId": 8259920,
+  "secs": 59,
+  "result": {
+    "taskId": 8259920,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/0c4/7df/8dd4c2e17821e52a42bffbfad1de46cec8118b41.png"
+      }
+    ]
+  }
+}

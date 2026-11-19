@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><title>look</title><style>html,body{margin:0;background:#d9d6d0;overflow:hidden}</style></head><body>
+<script type="module">
+// look.html?m=/models/oldman/model.glb&yaw=0 : one model on a plain stage, for checking
+import * as THREE from 'three'; import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'; import { loadOldman } from '/src/character.js';
+const q = new URLSearchParams(location.search);
+const r = new THREE.WebGLRenderer({ antialias: true }); r.setSize(innerWidth, innerHeight); r.setPixelRatio(1); r.toneMapping = THREE.ACESFilmicToneMapping; document.body.appendChild(r.domElement);
+const s = new THREE.Scene(); s.background = new THREE.Color('#d9d6d0');
+s.add(new THREE.HemisphereLight('#ffffff', '#8a8378', 1.6)); const k = new THREE.DirectionalLight('#fff4e6', 2.4); k.position.set(2, 4, 3); s.add(k);
+const f = new THREE.DirectionalLight('#dfe8ff', 0.8); f.position.set(-3, 2, -2); s.add(f);
+const cam = new THREE.PerspectiveCamera(30, innerWidth / innerHeight, 0.01, 100);
+let g, o;
+if (q.has('fix')) { const ch = await loadOldman(q.get('m')); ch.fix = q.get('fix') === '1'; o = ch.model; g = { animations: Object.values(ch.clips) }; window.pose = (n, t) => ch.pose(n, t); }
+else { g = await new GLTFLoader().loadAsync(q.get('m')); o = g.scene; const mixer = new THREE.AnimationMixer(o);
+  window.pose = (name, t) => { mixer.stopAllAction(); const c = g.animations.find(a => a.name === name); if (!c) return false; const a = mixer.clipAction(c); a.play(); mixer.setTime(t * c.duration); o.updateMatrixWorld(true); return true; }; }
+s.add(o);
+const box = new THREE.Box3().setFromObject(o), size = box.getSize(new THREE.Vector3()), c = box.getCenter(new THREE.Vector3());
+let tris = 0; o.traverse(n => { if (n.isMesh) tris += (n.geometry.index ? n.geometry.index.count : n.geometry.attributes.position.count) / 3; });
+window.info = { size: size.toArray().map(v => +v.toFixed(3)), tris, anims: g.animations.map(a => a.name), skinned: (() => { let k = 0; o.traverse(n => { if (n.isSkinnedMesh) k++; }); return k; })() };
+window.show = (yaw) => { const d = Math.max(size.x, size.y, size.z) * 2.3; cam.position.set(c.x + Math.sin(yaw) * d, c.y + size.y * 0.12, c.z + Math.cos(yaw) * d); cam.lookAt(c); r.render(s, cam); };
+window.frame = (fx, fy, fz, d, yaw, pitch = 0) => { const t = c.clone().add(new THREE.Vector3(fx * size.x, fy * size.y, fz * size.z)); const D = Math.max(size.x, size.y) * d;
+  cam.position.set(t.x + Math.sin(yaw) * D * Math.cos(pitch), t.y + Math.sin(pitch) * D, t.z + Math.cos(yaw) * D * Math.cos(pitch)); cam.lookAt(t); r.render(s, cam); };
+show(+(q.get('yaw') || 0)); window.ready = true;
+</script></body></html>

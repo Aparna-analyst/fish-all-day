@@ -1,0 +1,65 @@
+{
+  "rigTask": 8259999,
+  "anims-a": {
+    "task": 8260019,
+    "clips": [
+      "Walk_Carry_Loop",
+      "Walk_Loop",
+      "Sitting_Enter",
+      "Sitting_Idle_Loop",
+      "Sitting_Exit",
+      "Consume",
+      "OverhandThrow",
+      "Idle_Loop",
+      "Yes",
+      "Chest_Open"
+    ]
+  },
+  "anims-b": {
+    "task": 8260020,
+    "clips": [
+      "Dance_Loop",
+      "Hit_Knockback",
+      "Swim_Idle_Loop",
+      "ClimbUp_1m",
+      "Idle_Lantern_Loop",
+      "Idle_No_Loop",
+      "Sitting_Talking_Loop",
+      "Crouch_Idle_Loop",
+      "Fixing_Kneeling",
+      "LayToIdle"
+    ]
+  },
+  "rig": {
+    "task": 8259999,
+    "url": "https://qhsmodel.kujiale.com/ai-generate/3/8260015-1.glb"
+  },
+  "anims-c": {
+    "task": 8261035,
+    "url": "https://qhsmodel.kujiale.com/ha/open/v1/1bd04c7c-b42c-4a94-89a3-0f2237fb6661/animation.glb",
+    "secs": 14,
+    "clips": [
+      "Idle_Talking_Loop",
+      "Idle_FoldArms_Loop",
+      "Idle_Rail_Call",
+      "Punch_Jab",
+      "Hit_Head",
+      "Death01",
+      "Jump_Start",
+      "Jump_Land",
+      "Zombie_Scratch",
+      "Spell_Simple_Shoot"
+    ]
+  },
+  "anims-d": {
+    "task": 8261043,
+    "url": "https://qhsmodel.kujiale.com/ha/open/v1/5ae10e93-5fa9-4141-a8bb-60c68bb01b78/animation.glb",
+    "secs": 14,
+    "clips": [
+      "Jog_Fwd_Loop",
+      "Walk_Formal_Loop",
+      "Interact",
+      "Hit_Chest"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "prop-can",
+  "img": "../design/picks/can-aholo.png",
+  "version": "G1-Turbo",
+  "faces": 20000,
+  "taskId": 8277189,
+  "secs": 81,
+  "url": "https://qhsmodel.kujiale.com/genesis3d/inference/20261118/daf111ac40fc4e9a97df56ae0274ff5f/results/tex_mesh/attempt-1/tex_mesh.glb",
+  "result": {
+    "taskId": 8277189,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhsmodel.kujiale.com/genesis3d/inference/20261118/daf111ac40fc4e9a97df56ae0274ff5f/results/tex_mesh/attempt-1/tex_mesh.glb"
+      }
+    ]
+  }
+}

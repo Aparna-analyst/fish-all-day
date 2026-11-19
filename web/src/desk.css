@@ -1,0 +1,85 @@
+@import '@fontsource-variable/fraunces';
+@import '@fontsource-variable/nunito';
+:root { --bobber: #ff5a36; --ink: #2b1f17; --paper: #fbf3e4; --serif: 'Fraunces Variable', Georgia, serif; --sans: 'Nunito Variable', system-ui, sans-serif; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; font: 14px/1.35 var(--sans); color: var(--ink);
+  -webkit-user-select: none; user-select: none; cursor: default; }
+canvas#c { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+#ui { position: fixed; inset: 0; pointer-events: none; }
+/* the preview in a browser: a wallpaper and a Dock behind him, so he can be seen as he will sit */
+body.preview { background: radial-gradient(ellipse at 70% 90%, #f6c9a8 0%, #c9a8d8 35%, #4a5f8f 75%, #1c2a4a 100%); }
+body.preview::after { content: ''; position: fixed; left: 50%; transform: translateX(-50%); bottom: 6px; width: min(860px, 80vw); height: var(--dock, 64px);
+  border-radius: 20px; background: rgba(255, 255, 255, .28); border: 1px solid rgba(255, 255, 255, .35); backdrop-filter: blur(20px); z-index: -1;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .25); }
+
+/* the game's small pieces, placed over his head by script (transform), all quiet but the bite */
+.bubble, .gauge, .say, .card, .book { position: fixed; left: 0; top: 0; pointer-events: auto; }
+.bubble { width: 44px; height: 44px; display: grid; place-items: center; }
+.bubble svg { position: absolute; inset: 0; transform: rotate(-90deg); }
+.bubble .ring { fill: #fff; stroke: var(--bobber); stroke-width: 4; stroke-dasharray: 119.4; stroke-dashoffset: 0; filter: drop-shadow(0 4px 10px rgba(0,0,0,.25)); }
+.bubble b { position: relative; font: 800 26px/1 var(--serif); color: var(--bobber); }
+.bubble.go { animation: pop .5s cubic-bezier(.2, 1.6, .4, 1), nudge 1.2s .5s ease-in-out infinite; }
+@keyframes pop { from { scale: 0; } to { scale: 1; } }
+@keyframes nudge { 0%, 100% { rotate: 0deg; } 20% { rotate: -9deg; } 40% { rotate: 8deg; } 60% { rotate: -4deg; } }
+.gauge { width: 180px; padding: 8px 10px 7px; border-radius: 14px; background: rgba(251, 243, 228, .94); box-shadow: 0 8px 24px rgba(0,0,0,.22); display: grid; gap: 5px; }
+.gauge .bar { position: relative; height: 10px; border-radius: 99px; background: #e4d6c0; overflow: hidden; }
+.gauge .zone { position: absolute; top: 0; bottom: 0; left: 35%; width: 40%; background: #8fcf86; }
+.gauge .needle { position: absolute; top: -2px; bottom: -2px; width: 4px; margin-left: -2px; left: 45%; border-radius: 2px; background: var(--ink); }
+.gauge .land { height: 4px; border-radius: 99px; background: #e4d6c0; overflow: hidden; }
+.gauge .land i { display: block; height: 100%; width: 0; background: var(--bobber); }
+.gauge span { font: 700 11px/1 var(--sans); color: #6b5a48; text-align: center; }
+.gauge.holding span { visibility: hidden; }
+.gauge.danger { animation: shake .12s linear infinite; }
+.gauge.danger .bar { background: #f3b9a8; }
+@keyframes shake { 50% { translate: 2px 0; } }
+.say { padding: 7px 12px; border-radius: 14px 14px 14px 4px; background: #fff; font: 800 13px/1 var(--sans); box-shadow: 0 6px 18px rgba(0,0,0,.2); white-space: nowrap; }
+.card { width: 200px; padding: 14px 16px 12px; border-radius: 16px; background: var(--paper); box-shadow: 0 16px 40px rgba(0,0,0,.3); text-align: center; animation: pop .45s cubic-bezier(.2, 1.5, .4, 1); cursor: pointer; }
+.card h2 { margin: 8px 0 2px; font: 600 21px/1.1 var(--serif); }
+.card p { margin: 0; color: #6b5a48; } .card p.new { color: var(--bobber); font-weight: 800; margin-top: 4px; } .card small { display: block; margin-top: 6px; color: #9a8a76; }
+.rar { display: inline-block; font: 800 10px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; padding: 5px 9px; border-radius: 99px; background: var(--ink); color: var(--paper); }
+.rar.rare { background: #3d6fb8; } .rar.legendary { background: #d9a21b; color: #2b1f17; } .rar.junk { background: #8a8f86; }
+.book { left: 50%; top: auto; bottom: calc(var(--floor, 70px) + 16px); transform: translateX(-50%); width: min(720px, 92vw); max-height: 300px; overflow: auto;
+  padding: 14px 16px 16px; border-radius: 18px; background: rgba(251, 243, 228, .97); box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+.book header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 10px; } .book h2 { margin: 0; font: 600 22px/1 var(--serif); }
+.book header span { color: #6b5a48; font-size: 12px; flex: 1; }
+.book .x { border: 0; background: #e4d6c0; width: 28px; height: 28px; border-radius: 50%; font: 700 18px/1 var(--sans); cursor: pointer; color: var(--ink); }
+.book .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.book .cell { background: #fff; border-radius: 12px; padding: 8px; text-align: center; } .book .cell svg { width: 54px; height: 27px; }
+.book .cell b { display: block; font-size: 12px; } .book .cell small { color: #9a8a76; font-size: 10px; }
+.book .cell.unknown { background: #efe5d4; } .book .cell.unknown b { color: #9a8a76; }
+.puff { position: fixed; pointer-events: none; font: 700 18px/1 var(--serif); color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,.35); animation: rise 2.1s ease-out forwards; }
+.puff.zz { font-style: italic; }
+@keyframes rise { from { opacity: 0; translate: 0 0; scale: .6; } 15% { opacity: 1; } to { opacity: 0; translate: 22px -60px; scale: 1.3; } }
+/* the app icon: a rounded square of evening lake, him on the jetty edge, the line going into the water */
+body.icon::before { content: ''; position: fixed; inset: 100px; border-radius: 185px; z-index: -1;
+  background: linear-gradient(180deg, transparent 81.4%, #b48a5e 81.4%, #9a7350 83%, #7d5c40 100%), linear-gradient(180deg, #ffd9a8 0%, #f6b38e 34%, #c98fb0 52%, #4f8fa0 52.4%, #2f6f80 70%, #24596a 100%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.18); }
+body.icon::after { content: ''; position: fixed; left: 100px; right: 100px; top: calc(100px + 824px * .55); height: 10px; z-index: -1;
+  background: linear-gradient(90deg, transparent, rgba(255,240,220,.55), transparent); filter: blur(3px); }
+body.icon canvas#c { clip-path: inset(100px round 185px); }
+/* his speech: a bubble that pops in; when he wants something, a button under the words */
+.say { max-width: 260px; white-space: normal; line-height: 1.25; }
+.say.in { animation: pop .35s cubic-bezier(.2, 1.6, .4, 1); transform-origin: 0 100%; }
+.say.ask { display: grid; gap: 8px; }
+.say button { font: 800 13px/1 var(--sans); color: #fff; background: var(--bobber); border: 0; border-radius: 99px; padding: 8px 12px; cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 90, 54, .35); justify-self: start; }
+.say button:hover { filter: brightness(1.06); }
+/* where his stone hit the glass */
+.crack { position: fixed; pointer-events: none; animation: crackfade 5.2s ease-in forwards; }
+.crack svg path { fill: none; stroke: rgba(255, 255, 255, .92); stroke-width: 1.6; stroke-linejoin: round; filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, .7)); }
+@keyframes crackfade { 0% { opacity: 0; scale: .6; } 4% { opacity: 1; scale: 1; } 70% { opacity: 1; } 100% { opacity: 0; } }
+
+/* the x that closes his bubble and stops his voice */
+.say { position: fixed; }
+.say button.x { position: absolute; top: -9px; right: -9px; width: 22px; height: 22px; padding: 0; border-radius: 50%; background: #2b2622; color: #fff;
+  font: 700 14px/22px var(--sans); text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,.3); opacity: .85; }
+.say button.x:hover { opacity: 1; filter: none; }
+
+/* his controls, by his head while the mouse is on him */
+.chip { position: fixed; left: 0; top: 0; pointer-events: auto; display: flex; gap: 4px; padding: 4px; border-radius: 99px; background: rgba(255,255,255,.94);
+  box-shadow: 0 4px 14px rgba(0,0,0,.25); animation: pop .25s cubic-bezier(.2, 1.6, .4, 1); }
+.chip button { width: 28px; height: 28px; border: 0; border-radius: 50%; background: transparent; font: 15px/28px var(--sans); cursor: pointer; padding: 0; position: relative; }
+.chip button:hover { background: #efe9df; }
+.chip button.off { opacity: .45; }
+.chip button.off::after { content: ''; position: absolute; left: 5px; right: 5px; top: 13px; height: 2px; background: #c2410c; transform: rotate(-40deg); border-radius: 2px; }

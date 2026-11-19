@@ -1,0 +1,17 @@
+{
+  "name": "toy-grill",
+  "ref": "/Users/sid/Developer/Personal/desk-fishing-game/design/aholo/oldman-tb/oldman-tb.png",
+  "prompt": "A single small round charcoal kettle grill on three short stubby legs, black, with glowing coals and one thick steak on the grate, lid off. Draw it in exactly the same style as the reference picture: soft rounded cartoon clay vinyl-toy shapes, chunky toy proportions, simple matte painted materials, gentle warm colours. Only the object, not the man. The whole object alone, three-quarter front view from slightly above, plain light grey background, soft even studio light, no shadow, no text, no logos, nothing else in the picture.",
+  "taskId": 8259910,
+  "secs": 57,
+  "result": {
+    "taskId": 8259910,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/894/d9f/28d8b610f59946e8ea93370948de9646f210c540.png"
+      }
+    ]
+  }
+}

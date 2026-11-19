@@ -1,0 +1,17 @@
+{
+  "name": "oldman-tb",
+  "ref": "/Users/sid/Developer/Personal/desk-fishing-game/design/aholo/oldman-a/oldman-a.png",
+  "prompt": "The same cartoon old fisherman as in the reference picture, with exactly his face, beard, hat and clothes, in a clean T pose for 3D rigging: standing perfectly straight and symmetrical, seen straight from the front, both arms stretched straight out to the sides at shoulder height, level with the ground, elbows straight, palms facing down, fingers together and straight, thumbs relaxed, legs straight with the feet a little apart and pointing forward, head facing forward, calm friendly smile. Nothing in his hands, nothing on the ground. Full body from hat to boots with space around him, soft matte clay vinyl-toy style, plain light grey background, soft even studio light, no shadow, nothing else in the picture.",
+  "taskId": 8259795,
+  "secs": 46,
+  "result": {
+    "taskId": 8259795,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/e77/c60/54c7e5ca452ec87aa8b7b9947d12df9bab12e021.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"><title>poses</title><style>html,body{margin:0;background:#d9d6d0;overflow:hidden}</style></head><body>
+<script type="module">
+// poses.html: him alone on a plain stage; window.pose(name, t) holds one moment of a move (for contact sheets)
+import * as THREE from 'three'; import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js'; import { loadOldman } from '/src/character.js';
+const r = new THREE.WebGLRenderer({ antialias: true }); r.setSize(innerWidth, innerHeight); r.setPixelRatio(1); r.toneMapping = THREE.NeutralToneMapping; document.body.appendChild(r.domElement);
+const s = new THREE.Scene(); s.environment = new THREE.PMREMGenerator(r).fromScene(new RoomEnvironment(), 0.04).texture;
+const k = new THREE.DirectionalLight('#fff1dc', 2.4); k.position.set(-2, 4, 4); s.add(k);
+const cam = new THREE.PerspectiveCamera(30, innerWidth / innerHeight, 0.01, 50); cam.position.set(0.9, 1.0, 3.2); cam.lookAt(0, 0.68, 0);
+const ch = await loadOldman('/assets/oldman.glb'); const box = new THREE.Box3().setFromObject(ch.model), sc = 1.45 / box.getSize(new THREE.Vector3()).y;
+ch.model.scale.setScalar(sc); ch.model.position.y = -box.min.y * sc; s.add(ch.model);
+window.pose = (name, t) => { const ok = ch.pose(name, t); r.render(s, cam); return ok; };
+window.ready = true; r.render(s, cam);
+</script></body></html>

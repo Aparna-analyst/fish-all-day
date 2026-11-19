@@ -1,0 +1,17 @@
+{
+  "name": "prop-grill",
+  "ref": "-",
+  "prompt": "A single small cartoon round charcoal kettle grill on three short legs, black enamel with a domed lid set to one side, glowing coals and one thick steak on the grate. Soft matte clay vinyl-toy style, chunky and cute, matching a cosy cartoon fishing game. The whole object alone, seen from a three-quarter front view slightly above, plain light grey background, soft even studio light, no shadow, no text, no logos, nothing else in the picture.",
+  "taskId": 8259806,
+  "secs": 51,
+  "result": {
+    "taskId": 8259806,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/3ce/eff/768c1ae1502e08ba7c028d91a619863397140134.png"
+      }
+    ]
+  }
+}

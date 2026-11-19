@@ -1,0 +1,17 @@
+{
+  "name": "prop-cooler",
+  "ref": "-",
+  "prompt": "A single cartoon cooler box, closed, sky blue with a white lid and a white carry handle, slightly rounded corners. Soft matte clay vinyl-toy style, chunky and cute, matching a cosy cartoon fishing game. The whole object alone, seen from a three-quarter front view slightly above, plain light grey background, soft even studio light, no shadow, no text, no logos, nothing else in the picture.",
+  "taskId": 8259807,
+  "secs": 39,
+  "result": {
+    "taskId": 8259807,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/ae1/cb9/202252608999b703588feb530a137c64211281db.png"
+      }
+    ]
+  }
+}

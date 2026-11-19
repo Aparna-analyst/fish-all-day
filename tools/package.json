@@ -1,0 +1,1 @@
+{"name":"fish-all-day-tools","private":true,"type":"module","dependencies":{"@manycore/aholo-sdk-lux3d":"^1.10.0","@manycore/aholo-sdk-world":"^1.5.0","dotenv":"^18.0.10"}}

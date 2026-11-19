@@ -1,0 +1,17 @@
+{
+  "name": "prop-tacklebox",
+  "ref": "-",
+  "prompt": "A single cartoon wooden tackle box, closed, with a brass clasp and a leather carry handle, worn green paint. Soft matte clay vinyl-toy style, chunky and cute, matching a cosy cartoon fishing game. The whole object alone, seen from a three-quarter front view slightly above, plain light grey background, soft even studio light, no shadow, no text, no logos, nothing else in the picture.",
+  "taskId": 8259846,
+  "secs": 39,
+  "result": {
+    "taskId": 8259846,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/ba1/354/02f38f96aca92c8b191f2f85766ee1baeb15302c.png"
+      }
+    ]
+  }
+}

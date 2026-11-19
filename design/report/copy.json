@@ -1,0 +1,266 @@
+{
+ "cover": {
+  "kicker": "Manycore Aholo Global 3D AI Hackathon",
+  "title": "Fish All Day",
+  "subtitle": "The most useless uncle in your Mac family. Wild manners. Proudly useless.",
+  "line": "You work. I'll supervise the beer."
+ },
+ "summary": {
+  "title": "A fishing companion for your workday",
+  "lead": "Fish All Day is a free Mac app and website with a grumpy 3D fishing companion. Uncle Farter begs for beer money, celebrates catches and blames you for his farts. Aholo built his modelling sheets, 3D model, rig, moves and props.",
+  "try": [
+   "Website: visit https://fishallday.pages.dev, pay him pretend money and reel in a fish.",
+   "Mac app: download from the website and follow the guide. Requires macOS 13 or later and Apple silicon.",
+   "Trailer: watch 55 seconds of the running app in the X post tagged #Manycorehackathon."
+  ]
+ },
+ "guide": {
+  "title": "The entry at a glance",
+  "rows": [
+   [
+    "Built with Aholo",
+    "Image sheets became a Lux3D character, rig, 34 moves and matching props.",
+    "The Aholo build"
+   ],
+   [
+    "Fun to have around",
+    "Ten seconds to answer a bite, then a banjo dance or a soaking.",
+    "Fish between tasks"
+   ],
+   [
+    "A new idea",
+    "A retired cartoon uncle lives above your Dock, asks for beer money and interrupts overwork.",
+    "An uncle above your Dock"
+   ],
+   [
+    "It works today",
+    "18 behaviour checks, voice checks, sound checks and a live-site check all pass.",
+    "Make the movements fit"
+   ],
+   [
+    "People can see it",
+    "Website and Mac app shipped; trailer posted on X and shared in Aholo Discord.",
+    "Out in the world"
+   ]
+  ]
+ },
+ "sections": [
+  {
+   "id": "meet",
+   "kicker": "Meet the uncle",
+   "title": "Retired, grumpy and going fishing",
+   "body": [
+    "Uncle Farter is a retired 3D cartoon uncle. He wears an olive bucket hat with lures, a fishing vest and a red checked shirt. A white beard and green boots complete the look. He walks in, unfolds his camping chair and casts his line off your Dock.",
+    "His cooler has no beer. A speech bubble asks for $5. Press \"Give him $5\" to pay with pretend money. Nothing is charged. Ignore him and he nags and shakes your screen. Pay him and he jogs off, returning with a can to open, sip and burp over.",
+    "Between bites, he hums, dozes off, snores and wakes up grumpy. He farts a green puff and blames you. Poke him and he scolds you."
+   ],
+   "note": "I said retired. I never said quiet. Uncle Farter",
+   "caps": {
+    "beg": "An empty cooler, a $5 request and a button that spends only pretend money.",
+    "fart": "A green puff, followed by an accusation.",
+    "dance": "A landed fish earns a banjo dance.",
+    "stone": "After about 50 minutes of work, a stone triggers a screen-crack visual effect."
+   }
+  },
+  {
+   "id": "play",
+   "kicker": "Catch a fish",
+   "title": "Fish between tasks",
+   "body": [
+    "A bite brings a \"!\", a ten-second countdown ring and a Mac notification. Grab Uncle Farter and hold the mouse to reel. Land the fish and he dances to a banjo. Your fish book records catches from common to legendary, with sizes. The menu bar shows today's count.",
+    "Ignore the bite or reel too hard and the fish pulls him into the lake. There is a big splash, then he climbs out soaked."
+   ],
+   "note": "If I fall in, you're doing the laundry. Uncle Farter",
+   "caps": {
+    "reel": "Answer the bite within ten seconds. Grab him and hold the mouse to reel.",
+    "desktop": "Uncle Farter fishes above the Dock while you work."
+   }
+  },
+  {
+   "id": "mac",
+   "kicker": "On your Mac",
+   "title": "An uncle above your Dock",
+   "body": [
+    "The free Mac app runs on macOS 13 or later, on Apple silicon. A Swift see-through panel places him just above the Dock, on the screen that has it. Clicks pass through everywhere except on him. His clickable area is checked 30 times a second.",
+    "Hover over him for a small toolbar with voice mute, sound and \"Send him home\" controls. Sending him home pauses him. After about 50 minutes of work, he throws a stone to prompt a break. The screen crack is a visual effect.",
+    "The website's Mac download opens a short installation guide. The app is signed but not yet notarized by Apple, so macOS asks once. The guide explains why and how to proceed."
+   ],
+   "note": "You can send me home. The beer money stays with me. Uncle Farter",
+   "caps": {
+    "desktop": "A see-through strip above the Dock keeps Uncle Farter on your working desktop."
+   }
+  },
+  {
+   "id": "aholo",
+   "kicker": "Built with Aholo",
+   "title": "The Aholo build",
+   "body": [
+    "Every Aholo job used the entrant's own account and key. The Aholo image tool (Lux3D multimodal to image) turned the concept sketch into A-pose and T-pose modelling sheets. It also drew props, face and hand repaints, and the boxer pose on the website and report cover.",
+    "Lux3D G1 turned the T-pose sheet into Uncle Farter's model in 335 seconds. The result had about 54,000 faces, against 60,000 requested. Lux3D auto-rig added his skeleton in 64 seconds, keeping the mesh.",
+    "The Lux3D move library supplied 34 moves, including sitting, walking, jogging, casting, drinking, talking, dancing, falling, climbing and interacting. Ten moves returned in about 14 seconds. Lux3D G1-Turbo generated the camping chair, cooler, beer can and fish. Each prop took 70 to 95 seconds."
+   ],
+   "note": "They gave me a skeleton. Still couldn't give me manners. Uncle Farter",
+   "caps": {
+    "sheet": "Aholo image sheets kept the character consistent from A pose to T pose.",
+    "model": "Lux3D G1 turned the T-pose sheet into a model with about 54,000 faces.",
+    "moves": "Lux3D's move library supplied 34 moves on his rig.",
+    "props": "Lux3D G1-Turbo made the camping chair, cooler, beer can and fish."
+   }
+  },
+  {
+   "id": "iterations",
+   "kicker": "Before and after",
+   "title": "From sketch to working uncle",
+   "body": [
+    "The pictures trace the character from concept sketch to a rigged model in motion. They also show the prop style changing from realistic to toy-like.",
+    "Close-up repaints improved his face and hands at desktop size. Measured pose corrections adapted the library movements to his round body."
+   ],
+   "note": "The chair needed fixing. My figure is none of your business. Uncle Farter",
+   "caps": {}
+  },
+  {
+   "id": "craft",
+   "kicker": "Fit and function",
+   "title": "Make the movements fit",
+   "body": [
+    "The sitting fix used a 7.5 cm lift and two-bone inverse kinematics (IK) to keep his boots flat. His arms stay outside his belly, chest and beard. A push off the backrest corrects his position. Finger grips fit the rod and can.",
+    "three.js draws the 3D scene. The Mac app and website share the same code. Path finding routes him around his props. The generated prop models were slimmed to 0.1 to 0.4 MB each for the web.",
+    "Automated validation includes 18 behaviour checks, voice checks, sound checks and a live-site check. All are passing."
+   ],
+   "note": "Walk around the cooler. That's where the important work happens. Uncle Farter",
+   "caps": {}
+  },
+  {
+   "id": "voice",
+   "kicker": "Voice and sound",
+   "title": "A voice for every mood",
+   "body": [
+    "The team wrote 159 recorded lines across 21 moments, from asking for beer money to catches, pokes, waking and farts. ElevenLabs voice design created his 1930s cartoon sailor voice. Swear words are bleeped.",
+    "A speech-to-text check confirmed 157 of 159 recordings word for word. The other two differ only in how the transcriber wrote them.",
+    "Real sound effects include the can opening, chair creak, splashes, gulp, three farts, snore, reel, banjo, bell, stone whoosh and crack. The effects are CC0, sourced through Openverse and Freesound, and credited."
+   ],
+   "note": "They bleeped my vocabulary. The farts passed inspection. Uncle Farter",
+   "caps": {}
+  },
+  {
+   "id": "shipped",
+   "kicker": "Play it today",
+   "title": "Out in the world",
+   "body": [
+    "Fish All Day was built in about two days, on 18 and 19 November 2026. The website and free Mac app have shipped.",
+    "Visit https://fishallday.pages.dev for the 1930s cartoon page. The real 3D Uncle Farter walks in along the bottom and fishes. You can pay him and reel there too. The site also provides the Mac download and installation guide.",
+    "The 55-second trailer uses screen recordings of the real app. It was posted on X with #Manycorehackathon and shared in the Aholo Discord."
+   ],
+   "note": "I've made it onto the internet. Still waiting for my beer. Uncle Farter",
+   "caps": {
+    "site": "The website runs the real 3D uncle, including the pretend payment and fishing interactions.",
+    "trailer": "The 55-second trailer shows screen recordings of the real Mac app."
+   }
+  },
+  {
+   "id": "credits",
+   "kicker": "Tools and credits",
+   "title": "What made him possible",
+   "body": [
+    "Character imagery, modelling sheets and repaints: the Aholo image tool. Character model, rig, moves and props: Aholo Lux3D. Browser rendering: three.js, under the MIT licence. Voice: ElevenLabs. Dialogue: written by the team.",
+    "Fonts: Luckiest Guy, Bowlby One SC, Shrikhand and Bitter, under the SIL Open Font Licence. Sound effects: CC0 via Openverse and Freesound. Trailer music: Mixkit, under its free licence."
+   ],
+   "note": "Give them the credit. Give me the chair. Uncle Farter",
+   "caps": {}
+  }
+ ],
+ "iterations": [
+  {
+   "title": "Keep the same character",
+   "steps": [
+    "Concept sketch",
+    "Aholo A pose",
+    "Aholo T pose",
+    "Lux3D model",
+    "Rigged and moving"
+   ],
+   "text": "The Aholo image tool developed the concept sketch into A-pose and T-pose modelling sheets of the same uncle. Lux3D turned the T pose into his model, then added a rig and movements."
+  },
+  {
+   "title": "Make the props match",
+   "steps": [
+    "Realistic first attempt",
+    "Toy style revision",
+    "Matching Lux3D props"
+   ],
+   "text": "The image tool's first prop round looked realistic, such as a cooler with a drain tap and side handles. A second round used toy styling, followed by Lux3D models that matched Uncle Farter."
+  },
+  {
+   "title": "Make small details readable",
+   "steps": [
+    "Before the repaint",
+    "Aholo close-up repaints",
+    "Repainted 3D texture"
+   ],
+   "text": "The Aholo image tool repainted his face, hands and palms in close-up. Those repaints were projected back onto the 3D texture so his features read well at desktop size."
+  },
+  {
+   "title": "Fit a round body",
+   "steps": [
+    "Original library sit",
+    "Measured pose problems",
+    "Corrected seated pose"
+   ],
+   "text": "The library sit had straight legs, ankles 26 cm behind his hips and his bottom 13 cm above the seat. Corrections fitted the movement to his round body, with flat boots, arms clear of his torso and grips on his props."
+  }
+ ],
+ "facts": [
+  [
+   "Build period",
+   "About two days: 18 and 19 November 2026"
+  ],
+  [
+   "Aholo image jobs",
+   "30 jobs; 39 to 71 seconds each"
+  ],
+  [
+   "Lux3D G1 character",
+   "335 seconds; about 54,000 faces from 60,000 requested"
+  ],
+  [
+   "Lux3D auto-rig",
+   "64 seconds; mesh retained"
+  ],
+  [
+   "Lux3D library moves",
+   "34 moves; ten returned in about 14 seconds"
+  ],
+  [
+   "Lux3D G1-Turbo props",
+   "70 to 95 seconds each; slimmed to 0.1 to 0.4 MB each"
+  ],
+  [
+   "Recorded voice",
+   "159 lines across 21 moments"
+  ],
+  [
+   "Speech-to-text check",
+   "157 of 159 word-for-word matches; two transcription-only differences"
+  ],
+  [
+   "Bite response window",
+   "Ten seconds"
+  ],
+  [
+   "Click-through check",
+   "30 times a second"
+  ],
+  [
+   "Automated validation",
+   "18 behaviour checks plus voice, sound and live-site checks; all passing"
+  ],
+  [
+   "Trailer from app footage",
+   "55 seconds"
+  ]
+ ],
+ "back": {
+  "title": "Give your Dock an uncle",
+  "line": "Play at fishallday.pages.dev or download the free Mac app. Wild manners. Proudly useless."
+ }
+}

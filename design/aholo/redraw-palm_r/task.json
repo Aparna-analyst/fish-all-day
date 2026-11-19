@@ -1,0 +1,17 @@
+{
+  "name": "redraw-palm_r",
+  "ref": "/Users/sid/Developer/Personal/desk-fishing-game/models/oldman/polish/palm_r-before.png",
+  "prompt": "Redraw this exact picture as a cleaner, sharper cartoon hand seen from below, the palm. Keep the outline, size, position, angle and skin colour exactly the same, and the same plain grey background. Inside the same outline paint the palm with two soft palm lines, and three chubby cartoon fingers and a thumb exactly where the bumps are now, with clear soft creases between the fingers and at each finger joint. Smooth clean skin, no smears, no blur. Flat even light with no shadows, exactly like the original picture. No text.",
+  "taskId": 8260076,
+  "secs": 42,
+  "result": {
+    "taskId": 8260076,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/c8f/9b6/b8dfeb8c5c8b5c4959324becbbf4c586ae100e48.png"
+      }
+    ]
+  }
+}

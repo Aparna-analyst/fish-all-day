@@ -1,0 +1,267 @@
+{
+  "_how": "One entry per moment. Change, add or remove lines in each list; keep the keys. Swearing: write #@$%! and it is bleeped. Keep lines short (under about 70 characters) so the bubble stays small.",
+  "noBeer": {
+    "when": "He has just sat down, reaches into his cooler and finds no beer",
+    "lines": [
+      "Six beers short of a personality, kid.",
+      "Empty cooler. Just like your calendar.",
+      "Cold air. Breakfast of champions, boss.",
+      "You call this stocking? That's a draft.",
+      "Beer's a liquid, kid. Not a rumor.",
+      "Oh, #@$%! Somebody forgot the point."
+    ]
+  },
+  "askMoney": {
+    "when": "He stands up and asks you for money (his bubble shows the Give him $5 button)",
+    "lines": [
+      "Five bucks, kid. Beer ain't free. Neither am I.",
+      "Pay up, boss. It's a tax on my charm.",
+      "Sponsor a thirsty legend, kid.",
+      "My throat filed a complaint. Fund it.",
+      "Five dollars. Dirt cheap for my company.",
+      "Come on. My dignity is already spent."
+    ]
+  },
+  "stillWaiting": {
+    "when": "You still have not paid: he nags every 25 seconds or so and shakes your screen",
+    "lines": [
+      "Still dry, kid. My tongue is pressing charges.",
+      "Boss, your wallet is on airplane mode.",
+      "Tick tock. The ice is dead, kid.",
+      "Any slower and I'll die of scenery.",
+      "Your generosity took a wrong turn, kid."
+    ]
+  },
+  "moneyThanks": {
+    "when": "You paid",
+    "lines": [
+      "Fine, kid. You're almost useful now.",
+      "Thanks. Now I have a reason to sit.",
+      "Generous. Don't make it a habit, boss.",
+      "Look at you. Funding a legend.",
+      "Good kid. Guard my chair. Seriously."
+    ]
+  },
+  "backWithBeer": {
+    "when": "Back from the shop with a can, sitting down again",
+    "lines": [
+      "Crisis over, kid. Civilization resumes.",
+      "Behold, boss. Your money, now drinkable.",
+      "Shopkeeper says you're a cheapskate. Agreed.",
+      "The cooler has purpose again. So do you.",
+      "Cheers, genius. Now shut up and sit."
+    ]
+  },
+  "scold": {
+    "when": "Every few minutes: scolds you for nothing",
+    "lines": [
+      "You blink like a man with no plan.",
+      "Stop looking busy. You're fooling nobody.",
+      "Your ambition is in my light, kid.",
+      "Boss, that idea was a mistake. I heard it.",
+      "Careful. You're wearing out the air.",
+      "You sit down like you actually earned it.",
+      "Must you breathe like you're in charge?",
+      "Look at you, wasting prime napping hours.",
+      "Don't make my laziness look deliberate.",
+      "Nobody voted for you being awake, kid.",
+      "Keep that twitchy cursor off my peace.",
+      "Somehow your silence is still smug.",
+      "Great. Annoyed me without moving.",
+      "You need supervision. From someone better.",
+      "Enough, slacker. You're relaxing wrong."
+    ]
+  },
+  "nonsense": {
+    "when": "Every few minutes: talks nonsense",
+    "lines": [
+      "My beard is a retired weather report.",
+      "Clouds look unemployed. Respect.",
+      "Fish never pay rent. Shady little tenants.",
+      "A sandwich is just lunch in a coat.",
+      "Naps should count as experience.",
+      "Gravity overachieves. Show-off.",
+      "Soup is a drink with an ego.",
+      "Every pocket deserves an emergency biscuit.",
+      "Chairs are trousers for the lazy.",
+      "Time flies. Mine just sits.",
+      "Rubber ducks know things.",
+      "Silence sounds better with a beer.",
+      "Tuesday is a damp sock.",
+      "Boots are buckets with ambition.",
+      "Somewhere a worm is late for work.",
+      "Dreams need fewer stairs.",
+      "Nobody audits clouds. Lucky bastards.",
+      "Retirement is competitive sitting.",
+      "Lakes are puddles that got cocky.",
+      "Breakfast needs a pillow, honestly."
+    ]
+  },
+  "attention": {
+    "when": "You have not touched him for a long time: he wants attention",
+    "lines": [
+      "Oi. My silence needs an audience.",
+      "Kid, come watch me do nothing.",
+      "I require pointless supervision, boss.",
+      "I'm being ignored. Professionally.",
+      "Hello? Your best problem is down here.",
+      "Look alive. I can't do everything alone.",
+      "Over here, kid. Bring snacks.",
+      "Boss, I forgot why. Stay anyway."
+    ]
+  },
+  "noFish": {
+    "when": "Nothing has bitten for a long time: frustrated (sometimes flops on his back)",
+    "lines": [
+      "You scared them with competence, kid.",
+      "Even the worms look embarrassed.",
+      "Apologize to the water, boss.",
+      "The fish muted you, kid.",
+      "Tell your fish friends I'm losing patience.",
+      "Brilliant. You bored the bait.",
+      "At this rate we'll catch old age.",
+      "Another magnificent bucket of nothing.",
+      "Your clicking offended the whole lake.",
+      "Oh, #@$%! Even fish dodge you."
+    ]
+  },
+  "takeBreak": {
+    "when": "You have been at your Mac too long: tells you to take a break",
+    "lines": [
+      "Stand up. The chair won't marry you.",
+      "Drink water, boss. You're a dried fish.",
+      "Look away, genius. Pixels survive.",
+      "Rest your eyes. I'll watch the nothing.",
+      "Stretch. You're becoming a question mark.",
+      "Blink, kid. You're staring harder than my fish.",
+      "Walk it off. Bring back less stress.",
+      "Nap. You make mine look lazy."
+    ]
+  },
+  "stone": {
+    "when": "Right after he throws a stone and cracks your screen",
+    "lines": [
+      "You ignored me. The pebble booked a meeting.",
+      "Special delivery. One very firm reminder.",
+      "Boss, that's my rock of concern.",
+      "My rock has better timing than you.",
+      "Fine. I'll knock on your screen.",
+      "That's the official pebble of disapproval."
+    ]
+  },
+  "caughtFish": {
+    "when": "You landed a fish (he dances to banjo)",
+    "lines": [
+      "Applaud now. Briefly. Then louder.",
+      "Behold, kid. A fish with excellent taste.",
+      "Greatness stinks. Hold the bucket, boss.",
+      "The fish recognized my authority.",
+      "Watch, kid. This belly can dance.",
+      "Now you can brag about knowing me.",
+      "Stand back. Victory needs elbow room.",
+      "Remember this. I was briefly useful.",
+      "Applause. My lunch deserves an entrance.",
+      "Tell everyone, kid. Especially the fish."
+    ]
+  },
+  "caughtJunk": {
+    "when": "You landed junk (a boot, a can)",
+    "lines": [
+      "Seafood? I want a refund.",
+      "Behold. Dinner for absolutely nobody.",
+      "Lovely. Your rubbish arrived, boss.",
+      "Congrats. We caught an unpaid chore.",
+      "Dinner's canceled. Eat disappointment.",
+      "What wine pairs with rubbish, boss?",
+      "Your junk learned to swim. Great.",
+      "Oh, #@$%! You're cleaning this."
+    ]
+  },
+  "gotAway": {
+    "when": "The fish got away (you let go too early)",
+    "lines": [
+      "You gave it slack and a goodbye party.",
+      "Loose line. Very charitable, kid.",
+      "Congrats, boss. You freed my dinner.",
+      "Next time, send it home with beer.",
+      "You work for the fish now, apparently.",
+      "There goes lunch. Proud of yourself?"
+    ]
+  },
+  "snapped": {
+    "when": "The line snapped (you held on too long, needle in the red)",
+    "lines": [
+      "You reeled like the lake owed you money.",
+      "Gently! That line had retirement plans.",
+      "Congrats. You caught two short strings.",
+      "We wanted fish, not demolition, kid."
+    ]
+  },
+  "ignoredBite": {
+    "when": "A fish bit and you did nothing",
+    "lines": [
+      "You missed dinner. It knocked and everything.",
+      "Busy, boss? The fish canceled on us.",
+      "Even my nap caught that bite, kid.",
+      "The bait outworked you. Congrats.",
+      "Explain yourself to lunch next time."
+    ]
+  },
+  "pulledIn": {
+    "when": "A big fish pulled him into the water: said when he climbs back out",
+    "lines": [
+      "You fish. I'll wring out my dignity.",
+      "Thanks. My boots are aquariums now.",
+      "Your teamwork soaked my trousers, boss.",
+      "Brilliant. Even my beard needs a towel.",
+      "Next time, you're the bait.",
+      "Oh, #@$%! You owe me dry socks."
+    ]
+  },
+  "poke": {
+    "when": "You click or press on him while he sits",
+    "lines": [
+      "You poked it. Now you fund it.",
+      "Hands off. This belly is private property.",
+      "I'm a fisherman, not a doorbell.",
+      "Careful. That beard has seniority.",
+      "Poking costs extra. Pay in beer.",
+      "Unless you're a sandwich, stop tapping.",
+      "Go poke your unfinished work, kid.",
+      "That finger could fetch me a beer.",
+      "Keep clicking. I'm billing overtime.",
+      "Touch my hat again. It charges rent."
+    ]
+  },
+  "wake": {
+    "when": "You click him while he is asleep and snoring: he wakes up and scolds you",
+    "lines": [
+      "You interrupted important nothing.",
+      "Quiet. I was winning an argument asleep.",
+      "My dream had better service, boss.",
+      "Unless that's beer, put the nap back."
+    ]
+  },
+  "burp": {
+    "when": "After a sip of beer he sometimes burps",
+    "lines": [
+      "You heard nothing. The chair is haunted.",
+      "Relax. That was dinner applauding.",
+      "Excuse you, boss. Someone had to say it.",
+      "Blame the bubbles. I was outnumbered."
+    ]
+  },
+  "fart": {
+    "when": "He farts in his chair and blames you",
+    "lines": [
+      "Excuse you. The fish have noses.",
+      "Boss, your manners have sprung a leak.",
+      "That came from your side of the dock.",
+      "Easy. You're peeling the paint.",
+      "Your wind. My chair is the witness.",
+      "Lovely. You've pickled the lake.",
+      "Keep it up. The worms are packing.",
+      "Oh, #@$%! Warn the fish next time."
+    ]
+  }
+}

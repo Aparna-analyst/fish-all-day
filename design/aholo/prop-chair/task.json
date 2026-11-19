@@ -1,0 +1,17 @@
+{
+  "name": "prop-chair",
+  "ref": "-",
+  "prompt": "A single cartoon folding camping chair, opened, with a green-and-cream striped canvas seat and back, a simple aluminium frame and wooden armrests. Soft matte clay vinyl-toy style, chunky and cute, matching a cosy cartoon fishing game. The whole object alone, seen from a three-quarter front view slightly above, plain light grey background, soft even studio light, no shadow, no text, no logos, nothing else in the picture.",
+  "taskId": 8259808,
+  "secs": 39,
+  "result": {
+    "taskId": 8259808,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/1b1/3e8/643aacb009e7df74181e062ad7dd185c6e145b46.png"
+      }
+    ]
+  }
+}

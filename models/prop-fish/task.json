@@ -1,0 +1,19 @@
+{
+  "name": "prop-fish",
+  "img": "../design/picks/fish-aholo.png",
+  "version": "G1-Turbo",
+  "faces": 20000,
+  "taskId": 8277191,
+  "secs": 95,
+  "url": "https://qhsmodel.kujiale.com/genesis3d/inference/20261118/50724d70c5cd4598a735e5ee6db7552e/results/tex_mesh/attempt-1/tex_mesh.glb",
+  "result": {
+    "taskId": 8277191,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhsmodel.kujiale.com/genesis3d/inference/20261118/50724d70c5cd4598a735e5ee6db7552e/results/tex_mesh/attempt-1/tex_mesh.glb"
+      }
+    ]
+  }
+}

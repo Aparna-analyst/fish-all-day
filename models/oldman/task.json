@@ -1,0 +1,22 @@
+{
+  "name": "oldman",
+  "img": "/Users/sid/Developer/Personal/desk-fishing-game/design/aholo/oldman-tb/oldman-tb.png",
+  "version": "G1",
+  "faces": 60000,
+  "taskId": 8259886,
+  "secs": 335,
+  "url": "https://qhsmodel.kujiale.com/lux3dPbrEmbedResult/ea4fe321eb9b4019b7e0c69a5bc97c08/textured.glb",
+  "result": {
+    "taskId": 8259886,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://tx-qhfpm-1258830046.cos.ap-shanghai.myqcloud.com/lux3d/658326272/result.zip?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDTmpb6KIzPZS5RWKr76oGRKwHL8etrYw4%26q-sign-time%3D1794956690%3B1794963890%26q-key-time%3D1794956690%3B1794963890%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3D128214752163b65229e94dffe9d0963ed375062b"
+      },
+      {
+        "content": "https://qhsmodel.kujiale.com/lux3dPbrEmbedResult/ea4fe321eb9b4019b7e0c69a5bc97c08/textured.glb"
+      }
+    ]
+  }
+}

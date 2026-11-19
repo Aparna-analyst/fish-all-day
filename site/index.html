@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Fish All Day | Your useless desktop pet for Mac</title>
+<meta name="description" content="Meet the useless uncle on your Mac's Dock. He begs for beer, fishes all day and blames you for the smell. A wild little desktop pet. Free for Mac.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#1f2f55">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" href="/favicon-48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fish All Day">
+<meta property="og:title" content="Fish All Day | The most useless uncle in your Mac family">
+<meta property="og:description" content="Uncle Farter lives on your Mac's Dock. He begs for beer, fishes all day and blames you for the smell. Wild, useless and free for Mac.">
+<meta property="og:image" content="/media/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Fish All Day","alternateName":"Uncle Farter, the useless desktop pet for Mac"},{"@type":"SoftwareApplication","name":"Fish All Day","operatingSystem":"macOS 13 or later (Apple silicon)","applicationCategory":"GameApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Bowlby+One+SC&family=Shrikhand&family=Bitter:ital,wght@0,400..800;1,600..800&display=swap" rel="stylesheet">
+<style>
+html { background: #f3e6c8; overflow-x: clip; }
+:root {
+  --paper: #f3e6c8; --paper-2: #ead6a8; --cream: #fff7e4; --ink: #1c1712; --brown: #4a3a2a; --navy: #1f2f55; --red: #c7372a; --red-hi: #d9463a;
+  --mustard: #e9a43a; --teal: #2e7d82; --wood: #a8703f; --wood-2: #8a5a31;
+  --toon: 'Luckiest Guy', 'Arial Black', sans-serif; --wood-type: 'Bowlby One SC', 'Arial Black', sans-serif; --swash: 'Shrikhand', Georgia, serif; --body: 'Bitter', Georgia, serif;
+  --strip: 300px; --dock-h: 60px; --dock-b: 10px;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: transparent; font: 400 17.5px/1.6 var(--body); color: var(--ink); -webkit-font-smoothing: antialiased; }
+/* old print paper: a halftone dot and a little grain, held still while the page scrolls */
+.paper { position: fixed; inset: 0; z-index: -1; background:
+  radial-gradient(rgba(28, 23, 18, .075) 1.1px, transparent 1.6px) 0 0 / 7px 7px,
+  radial-gradient(ellipse 90% 70% at 50% 40%, #f7ecd2 0%, #f3e6c8 55%, #e9d6a9 100%); }
+.paper::after { content: ''; position: absolute; inset: 0; opacity: .16; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .22 0 0 0 0 .12 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E"); }
+a { color: inherit; }
+:focus-visible { outline: 3px dashed var(--red); outline-offset: 4px; border-radius: 6px; }
+
+/* the menu bar */
+.bar { position: sticky; top: 0; z-index: 50; height: 38px; display: flex; align-items: center; gap: 22px; padding: 0 18px; background: var(--navy); color: var(--cream);
+  border-bottom: 3px solid var(--ink); font: 400 13px/1 var(--wood-type); letter-spacing: .06em; }
+.bar .brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+.bar .brand img { width: 20px; height: 20px; border-radius: 5px; }
+.bar nav { display: flex; gap: 18px; }
+.bar nav a { text-decoration: none; opacity: .88; } .bar nav a:hover { opacity: 1; color: var(--mustard); }
+.bar .sp { flex: 1; }
+.bar .count { display: flex; align-items: center; gap: 7px; font-variant-numeric: tabular-nums; }
+.bar .count svg { width: 20px; height: 20px; transform-origin: 60% 50%; color: var(--mustard); }
+.bar .count.wiggle svg { animation: wiggle .5s ease-in-out 3; }
+@keyframes wiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-16deg); } 75% { transform: rotate(16deg); } }
+
+main { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
+main.shake { animation: shake .42s cubic-bezier(.36, .07, .19, .97); }
+@keyframes shake { 10%, 90% { transform: translateX(-2px); } 20%, 80% { transform: translateX(4px); } 30%, 50%, 70% { transform: translateX(-7px); } 40%, 60% { transform: translateX(7px); } }
+
+/* hero: a 1930s cartoon title card, the uncle squaring up on the right */
+.hero { position: relative; min-height: calc(100svh - 108px); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(20px, 4vw, 64px); align-items: center;
+  padding: clamp(24px, 4vh, 48px) 0 calc(var(--strip) - 110px); isolation: isolate; }
+.hero .copy { display: grid; justify-items: start; }
+.pose { justify-self: start; width: auto; height: min(58vh, 540px); max-width: 100%; object-fit: contain;
+  filter: drop-shadow(3px 0 0 var(--ink)) drop-shadow(-3px 0 0 var(--ink)) drop-shadow(0 3px 0 var(--ink)) drop-shadow(0 -3px 0 var(--ink)) drop-shadow(10px 12px 0 rgba(28, 23, 18, .85)); }
+.rays { position: absolute; z-index: -1; left: 50%; top: 0; bottom: -80px; width: 100vw; transform: translateX(-50%); overflow: hidden; pointer-events: none; }
+.rays::before { content: ''; position: absolute; left: var(--rx, 70%); top: 46%; width: 170vmax; height: 170vmax; transform: translate(-50%, -50%);
+  background: repeating-conic-gradient(from 0deg, rgba(233, 164, 58, .22) 0deg 7.5deg, transparent 7.5deg 15deg);
+  -webkit-mask: radial-gradient(circle at 50% 50%, #000 0%, rgba(0, 0, 0, .55) 22%, transparent 42%); mask: radial-gradient(circle at 50% 50%, #000 0%, rgba(0, 0, 0, .55) 22%, transparent 42%); }
+.ribbon { display: inline-block; position: relative; margin: 0 0 20px; padding: 10px 30px 14px; background: var(--red); color: var(--cream); font: 400 clamp(24px, 2.6vw, 34px)/1 var(--swash);
+  border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); transform: rotate(-2.5deg); text-shadow: 2px 2px 0 var(--ink); }
+.ribbon::before, .ribbon::after { content: ''; position: absolute; top: 9px; width: 30px; height: 100%; background: #9e2a20; border: 3px solid var(--ink); z-index: -1; }
+.ribbon::before { left: -22px; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 40% 50%); border-right: 0; }
+.ribbon::after { right: -22px; clip-path: polygon(0 0, 100% 0, 60% 50%, 100% 100%, 0 100%); border-left: 0; }
+h1 { font: 400 clamp(46px, 5.6vw, 86px)/.98 var(--toon); max-width: 13ch; letter-spacing: .01em; margin: 0 0 22px; color: var(--cream);
+  -webkit-text-stroke: 3px var(--ink); paint-order: stroke fill; text-shadow: 5px 6px 0 var(--ink); text-wrap: balance; }
+h1 .u { color: var(--mustard); }
+h1 .m { color: var(--red); }
+.tag { font: italic 800 clamp(20px, 2vw, 26px)/1.3 var(--body); color: var(--navy); margin: 0 0 22px; text-wrap: balance; }
+.ctas { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: 10px; height: 60px; padding: 4px 28px 0; border-radius: 14px; border: 3px solid var(--ink); cursor: pointer;
+  font: 400 23px/1 var(--toon); letter-spacing: .02em; text-decoration: none; box-shadow: 5px 5px 0 var(--ink); transition: transform .12s, box-shadow .12s, background .12s; }
+.btn svg { width: 22px; height: 22px; flex: none; margin-top: -4px; }
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--ink); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--ink); }
+.btn.go { background: var(--red); color: var(--cream); text-shadow: 2px 2px 0 var(--ink); }
+.btn.go:hover { background: var(--red-hi); }
+.btn.alt { background: var(--cream); color: var(--ink); }
+.small { font: 400 12px/1.4 var(--wood-type); letter-spacing: .05em; color: var(--brown); margin: 18px 0 0; }
+
+/* the dialog that opens with the download: why macOS warns, why it's safe, how to open him */
+dialog.get { width: min(940px, calc(100vw - 28px)); max-height: calc(100svh - 28px); overflow: auto; padding: 0; border: 4px solid var(--ink); border-radius: 10px;
+  background: var(--cream); color: var(--ink); box-shadow: 12px 12px 0 var(--ink); font: 400 16px/1.5 var(--body); }
+dialog.get::backdrop { background: rgba(28, 23, 18, .58); }
+html:has(dialog.get[open]) { overflow: hidden; }
+.get .in { padding: clamp(22px, 3.4vw, 32px); display: grid; gap: 16px; outline: none; text-align: left; }
+.get .cols { display: grid; grid-template-columns: 1fr 1.15fr; gap: 22px; align-items: start; }
+.get b, .get ol.steps b { font-weight: 800; color: var(--ink); }
+.msg { font-style: italic; font-weight: 600; background: rgba(31, 47, 85, .08); border-radius: 4px; padding: 0 4px; }
+.panel .msg { background: rgba(255, 247, 228, .14); }
+.get .x { position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; border-radius: 50%; border: 3px solid var(--ink); background: var(--cream); cursor: pointer; display: grid; place-items: center; box-shadow: 2px 2px 0 var(--ink); }
+.get .x svg { width: 16px; height: 16px; }
+.get .ok { justify-self: start; display: inline-flex; gap: 8px; align-items: center; padding: 6px 12px 5px; border: 2px solid var(--ink); border-radius: 999px; background: #d8ecc4; font: 400 12px/1 var(--wood-type); letter-spacing: .06em; }
+.get .ok svg { width: 14px; height: 14px; }
+.get h2 { font: 400 clamp(28px, 4vw, 38px)/1.02 var(--toon); margin: 0; padding-right: 40px; color: var(--ink); text-shadow: none; }
+.get .lead { margin: 0; color: var(--brown); }
+.get h3 { font: 400 13px/1 var(--wood-type); letter-spacing: .07em; margin: 0 0 10px; color: var(--navy); }
+.get .safe { background: var(--paper); border: 2px solid var(--ink); border-radius: 8px; padding: 16px 18px; }
+.get .safe ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+.get .safe li { display: grid; grid-template-columns: 20px 1fr; gap: 10px; font-size: 15px; }
+.get .safe li svg { width: 18px; height: 18px; margin-top: 3px; color: #3d7a2a; }
+.get ol.steps { gap: 14px; }
+.get ol.steps li { grid-template-columns: 34px 1fr; gap: 12px; font-size: 15.5px; }
+.get ol.steps li::before { width: 34px; height: 34px; font-size: 17px; box-shadow: 2px 2px 0 var(--ink); }
+.get .k { display: inline-block; padding: 0 8px; margin: 0 1px; border: 1.5px solid #9a8f80; border-radius: 6px; background: #fff; font: 600 13.5px/1.6 -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif; color: #1d1d1f; white-space: nowrap; }
+.get .k.blue { background: #0a84ff; border-color: #0a6fd8; color: #fff; }
+.get .older { margin: 0; font-size: 14px; color: var(--brown); }
+.get .end { display: flex; flex-wrap: wrap; gap: 14px 18px; align-items: center; justify-content: space-between; border-top: 2px dashed rgba(28, 23, 18, .25); padding-top: 16px; }
+.get .end p { text-align: left; margin: 0; font-size: 14px; color: var(--brown); flex: 1 1 240px; }
+.get .end .btn { height: 52px; font-size: 20px; }
+.get .again { display: block; margin-top: 4px; font-size: 14px; color: var(--navy); }
+@media (max-width: 820px) { .get .cols { grid-template-columns: 1fr; } }
+
+/* the note that points down at him */
+.note { position: fixed; z-index: 45; right: 9vw; bottom: 290px; width: 260px; text-align: center; font: italic 800 17px/1.3 var(--body); color: var(--navy);
+  text-shadow: 0 0 6px var(--paper), 0 0 2px var(--paper); pointer-events: none; transition: opacity .5s; }
+.note svg { display: block; width: 46px; height: 58px; margin: 6px auto 0; color: var(--ink); }
+.note.gone { opacity: 0; }
+
+/* sections */
+section { padding: clamp(70px, 11vh, 130px) 0 0; }
+.kicker { font: 400 14px/1 var(--wood-type); letter-spacing: .12em; color: var(--red); margin: 0 0 12px; }
+h2 { font: 400 clamp(38px, 4.6vw, 64px)/1 var(--toon); letter-spacing: .01em; margin: 0 0 40px; color: var(--navy); max-width: 20ch; text-wrap: balance;
+  text-shadow: 3px 3px 0 rgba(233, 164, 58, .85); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 30px; }
+.card { background: var(--cream); border: 4px solid var(--ink); border-radius: 6px; box-shadow: 8px 8px 0 var(--ink); overflow: hidden; display: flex; flex-direction: column; }
+.card:nth-child(1) { transform: rotate(-.6deg); } .card:nth-child(2) { transform: rotate(.5deg); } .card:nth-child(3) { transform: rotate(.4deg); } .card:nth-child(4) { transform: rotate(-.5deg); }
+.card img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; border-bottom: 4px solid var(--ink); background: #c9a8d8; filter: saturate(.92) contrast(1.02); }
+.card div { padding: 22px 26px 26px; }
+.card h3 { font: 400 27px/1.05 var(--toon); letter-spacing: .01em; margin: 0 0 10px; color: var(--red); }
+.card p { margin: 0; color: var(--brown); }
+
+.panel { position: relative; background: var(--navy); color: var(--cream); border: 4px solid var(--ink); border-radius: 8px; box-shadow: 10px 10px 0 var(--ink);
+  padding: clamp(30px, 5vw, 56px); display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(28px, 5vw, 64px); }
+.panel::before { content: ''; position: absolute; inset: 10px; border: 2px dashed rgba(255, 247, 228, .45); border-radius: 4px; pointer-events: none; }
+.panel h2 { color: var(--cream); text-shadow: 3px 3px 0 var(--red); margin-bottom: 18px; }
+.panel .kicker { color: var(--mustard); }
+.panel p { color: #e7dcc4; margin: 0 0 26px; }
+ol.steps { list-style: none; counter-reset: s; margin: 0; padding: 0; display: grid; gap: 18px; position: relative; }
+ol.steps li { counter-increment: s; display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
+ol.steps li::before { content: counter(s); width: 44px; height: 44px; border-radius: 50%; background: var(--red); color: var(--cream); border: 3px solid var(--ink); box-shadow: 3px 3px 0 var(--ink);
+  display: grid; place-items: center; font: 400 22px/1 var(--toon); padding-top: 4px; }
+ol.steps b { font-weight: 800; color: var(--mustard); }
+
+.faq { display: grid; gap: 14px; max-width: 860px; }
+details { background: var(--cream); border: 3px solid var(--ink); border-radius: 6px; box-shadow: 5px 5px 0 var(--ink); }
+summary { cursor: pointer; list-style: none; padding: 18px 56px 16px 22px; font: 400 21px/1.15 var(--toon); letter-spacing: .01em; color: var(--navy); position: relative; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '+'; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font: 400 30px/1 var(--toon); color: var(--red); transition: transform .2s; }
+details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+details p { margin: 0; padding: 0 22px 20px; color: var(--brown); }
+
+.end { text-align: center; display: grid; justify-items: center; }
+.end img.uncle { width: min(440px, 80vw); height: auto; filter: drop-shadow(6px 8px 0 rgba(28, 23, 18, .9)); margin-bottom: 10px; }
+.end h2 { margin: 0 auto 28px; }
+footer { width: min(1160px, calc(100% - 48px)); margin: clamp(80px, 12vh, 140px) auto 0; padding: 26px 0 calc(var(--strip) + 30px); border-top: 3px solid var(--ink);
+  font-size: 15px; color: var(--brown); }
+footer p { margin: 0; max-width: 70ch; }
+
+/* the Dock, as a wooden fishing dock, and him on it */
+.dock { position: fixed; z-index: 30; left: 50%; transform: translateX(-50%); bottom: var(--dock-b); height: var(--dock-h); width: min(1240px, 94vw);
+  border: 3px solid var(--ink); border-radius: 8px; box-shadow: 0 5px 0 var(--ink);
+  background: linear-gradient(rgba(255, 255, 255, .16), rgba(0, 0, 0, .08)), repeating-linear-gradient(90deg, var(--wood) 0 132px, var(--wood-2) 132px 135px), var(--wood);
+  display: flex; align-items: center; gap: 10px; padding: 0 12px; }
+.dock::before, .dock::after { content: ''; position: absolute; bottom: -13px; width: 16px; height: 12px; background: var(--wood-2); border: 3px solid var(--ink); border-top: 0; }
+.dock::before { left: 10%; } .dock::after { right: 10%; }
+.dock a, .dock button { width: 44px; height: 44px; border-radius: 9px; border: 0; padding: 0; cursor: pointer; display: grid; place-items: center; position: relative;
+  transition: transform .15s cubic-bezier(.3, .7, .4, 1.5); text-decoration: none; background: none; }
+.dock a:hover, .dock button:hover { transform: translateY(-6px) rotate(-3deg); }
+.dock img { width: 44px; height: 44px; border-radius: 9px; display: block; border: 2px solid var(--ink); }
+.dock .tile { background: var(--cream); color: var(--ink); border: 2px solid var(--ink); box-shadow: 2px 2px 0 var(--ink); }
+.dock .tile svg { width: 22px; height: 22px; }
+.dock .tile.off svg .on { display: none; }
+.dock .tile:not(.off) svg .offx { display: none; }
+.dock [data-tip]::after { content: attr(data-tip); position: absolute; bottom: 58px; left: 50%; transform: translateX(-50%); white-space: nowrap; padding: 6px 10px 5px; border-radius: 6px;
+  background: var(--ink); color: var(--cream); font: 400 12px/1 var(--wood-type); letter-spacing: .05em; opacity: 0; pointer-events: none; transition: opacity .15s; }
+.dock [data-tip]:hover::after, .dock [data-tip]:focus-visible::after { opacity: 1; }
+.dock .sep { width: 3px; height: 36px; background: rgba(28, 23, 18, .35); margin: 0 4px; }
+.dock .back { width: auto; padding: 4px 16px 0; height: 40px; border-radius: 9px; background: var(--red); color: var(--cream); border: 2px solid var(--ink); box-shadow: 2px 2px 0 var(--ink); font: 400 16px/1 var(--toon); }
+#man { position: fixed; z-index: 40; left: 0; bottom: 0; width: 100%; height: var(--strip); border: 0; background: transparent; pointer-events: none; color-scheme: normal; }
+
+.toast { position: fixed; z-index: 60; top: 50px; left: 50%; transform: translate(-50%, -20px); opacity: 0; padding: 12px 18px 12px 14px; border-radius: 8px;
+  background: var(--cream); color: var(--ink); border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); display: flex; gap: 12px; align-items: center;
+  font: 600 15px/1.3 var(--body); transition: transform .3s cubic-bezier(.3, .7, .4, 1.3), opacity .3s; pointer-events: none; }
+.toast.on { transform: translate(-50%, 0); opacity: 1; }
+.toast img { width: 34px; height: 34px; border-radius: 8px; border: 2px solid var(--ink); }
+.toast b { display: block; font: 400 19px/1.1 var(--toon); color: var(--red); }
+
+@media (max-width: 900px) {
+  .note { display: none; }
+  .hero { min-height: 0; padding-top: 26px; padding-bottom: 60px; grid-template-columns: 1fr; gap: 14px; justify-items: center; text-align: center; }
+  .hero .copy { justify-items: center; }
+  .hero .ctas { justify-content: center; }
+  .pose { order: -1; height: 200px; justify-self: center; }
+  .hero .small { display: none; }
+  .rays::before { left: 50%; top: 130px; }
+  .panel { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  :root { --strip: 230px; --dock-h: 54px; --dock-b: 10px; }
+  body { font-size: 16.5px; }
+  main, footer { width: calc(100% - 32px); }
+  .bar nav { display: none; }
+  .grid { grid-template-columns: 1fr; }
+  .card { transform: none !important; }
+  h1 { -webkit-text-stroke-width: 2px; text-shadow: 3px 4px 0 var(--ink); }
+  .btn { height: 56px; padding: 4px 22px 0; font-size: 20px; }
+  .ctas .btn { flex: 1 1 auto; justify-content: center; }
+  .dock { width: calc(100vw - 20px); gap: 6px; padding: 0 8px; }
+  .dock [data-tip]::after { display: none; }
+  .dock .back { height: 36px; padding: 4px 12px 0; font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="paper" aria-hidden="true"></div>
+
+<header class="bar">
+  <a class="brand" href="#top"><img src="/favicon-48.png" alt="" width="20" height="20">Fish All Day</a>
+  <nav aria-label="Sections"><a href="#what">What he does</a><a href="#install">Install</a><a href="#faq">FAQ</a></nav>
+  <span class="sp"></span>
+  <span class="count" id="count" title="Fish caught on this page today">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12c2.6-4.2 6.4-6 10.2-6 3.4 0 5.8 2.2 7.3 6-1.5 3.8-3.9 6-7.3 6C9.4 18 5.6 16.2 3 12Z" fill="currentColor"/><path d="M3 12 0.8 8.4M3 12 .8 15.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16.6" cy="10.8" r="1.2" fill="#1f2f55"/></svg>
+    <span><b id="today">0</b> today</span>
+  </span>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="rays" aria-hidden="true"></div>
+    <div class="copy">
+      <span class="ribbon">Uncle Farter</span>
+      <h1>The most <span class="u">useless</span> uncle in your <span class="m">Mac</span> family</h1>
+      <p class="tag">Wild manners. Proudly useless. Free for Mac.</p>
+      <div class="ctas">
+        <a class="btn go" href="/Fish-All-Day.dmg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>Download for Mac</a>
+      </div>
+      <p class="small">macOS 13+ · Apple silicon</p>
+    </div>
+    <img class="pose" src="/media/uncle-fists.webp" alt="Uncle Farter with his fists up, ready to scold you" width="554" height="896" fetchpriority="high">
+  </div>
+
+  <section id="what" aria-labelledby="what-h">
+    <p class="kicker">What he does all day</p>
+    <h2 id="what-h">He fishes. You do the work.</h2>
+    <div class="grid">
+      <article class="card"><img src="/media/beg.jpg" alt="He stands beside his cooler asking you for five dollars" loading="lazy" width="880" height="660"><div>
+        <h3>A useless uncle with expenses</h3>
+        <p>He walks in, forgets his beer and begs you for $5. Click “Give him $5” for a pretend payment. He jogs off, comes back with a can and settles into his camping chair on your Dock.</p></div></article>
+      <article class="card"><img src="/media/reel.jpg" alt="A red exclamation mark above him: a fish is biting" loading="lazy" width="880" height="660"><div>
+        <h3>He fishes, you do the work</h3>
+        <p>Random bites bring a notification and a screen shake. Hold the mouse on him to reel before the fish escapes. Land one for your fish book and menu bar count, then watch him dance to banjo as if he helped.</p></div></article>
+      <article class="card"><img src="/media/fart.jpg" alt="Green puffs drift out from both sides of his chair while he looks innocent" loading="lazy" width="880" height="660"><div>
+        <h3>Bad air runs in the family</h3>
+        <p>He watches your screen time and scolds you for skipping breaks. He dozes, snores and scolds you again if you wake him or click him. Then he farts in his chair and blames you, in a voice like a sailor gargling gravel.</p></div></article>
+      <article class="card"><img src="/media/controls.jpg" alt="His small toolbar above him while he dozes: voice, sound, send him home, more" loading="lazy" width="880" height="660"><div>
+        <h3>You can send him home</h3>
+        <p>Hover over him or right-click for his controls. Mute him, close his bubble or send him home. Family visits need an end time.</p></div></article>
+    </div>
+  </section>
+
+  <section id="install" aria-labelledby="install-h">
+    <div class="panel">
+      <div>
+        <p class="kicker">Install on your Mac</p>
+        <h2 id="install-h">Two minutes. One grumpy roommate.</h2>
+        <p>This version isn't notarized by Apple, so macOS may block the first launch. The steps approve this app individually.</p>
+        <a class="btn go" href="/Fish-All-Day.dmg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>Download for Mac</a>
+      </div>
+      <ol class="steps">
+        <li><span>Open the downloaded Fish-All-Day.dmg and drag Fish All Day into Applications.</span></li>
+        <li><span>Open Fish All Day from Applications to see <span class="msg">Apple could not verify “Fish All Day” is free of malware</span>. Click <b>Done</b>, not <b>Move to Trash</b>.</span></li>
+        <li><span>Open <b>System Settings</b> → <b>Privacy &amp; Security</b> and scroll down to <b>Security</b>. Find <span class="msg">“Fish All Day” was blocked to protect your Mac</span>, click <b>Open Anyway</b>, then confirm <b>Open Anyway</b> with your password or Touch ID.</span></li>
+        <li><span>Uncle Farter walks onto your Dock. You only do this once; after that, the app opens normally.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-h">
+    <p class="kicker">Questions</p>
+    <h2 id="faq-h">Before you adopt him</h2>
+    <div class="faq">
+      <details><summary>Is it free?</summary><p>Yes. The app is free. His “Give him $5” button is part of the joke and doesn't charge you. Your uncle has a rich life on fake money.</p></details>
+      <details><summary>Will it slow down my Mac?</summary><p>Drawing him in 3D uses some processing power, memory and battery. The impact depends on your Mac and what else is running. Send him home to pause his activity and drawing. Even doing nothing takes effort.</p></details>
+      <details><summary>Can I mute him?</summary><p>Yes. Hover over him or right-click to mute his voice or all sound. Close a speech bubble to stop that line. Send him home when you've had enough of the burps, nonsense and bleeped swears.</p></details>
+      <details><summary>Is it safe?</summary><p>He may throw a stone when he wants you to take a break. The screen crack is a visual effect, and the beer button takes no real money. This release isn't notarized, so Apple hasn't checked it through that process.</p></details>
+      <details><summary>Which macOS does it need?</summary><p>The current download is for macOS 13 Ventura or later on an Apple silicon Mac, M1 or newer. It doesn't support Intel Macs. He's picky for a man who brought his own chair.</p></details>
+    </div>
+  </section>
+
+  <section class="end" aria-labelledby="end-h">
+    <img class="uncle" src="/media/uncle.png" alt="Uncle Farter in his camping chair with his rod and a blue cooler" width="780" height="690" loading="lazy">
+    <h2 id="end-h">Let your Dock go wild</h2>
+    <a class="btn go" href="/Fish-All-Day.dmg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>Download for Mac</a>
+  </section>
+</main>
+
+<footer>
+  <p>Fish All Day. Built for the Manycore Aholo 3D AI Hackathon. Uncle Farter himself was modelled, rigged and animated with Aholo's Lux3D tools, and his chair, cooler, beer can and fish were modelled there too. #Manycorehackathon #AholoLux3D</p>
+</footer>
+
+<dialog class="get" id="get" aria-labelledby="get-h">
+  <div class="in" tabindex="-1" autofocus>
+    <form method="dialog"><button class="x" aria-label="Close"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button></form>
+    <span class="ok"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Download started</span>
+    <h2 id="get-h">Opening Fish All Day</h2>
+    <p class="lead">Your download has started. This hackathon release is signed but not yet notarized by Apple, so a macOS warning on first launch is expected.</p>
+    <div class="cols">
+    <div class="safe"><h3>Safe to use</h3><ul>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Notarization requires a paid Apple Developer account and an identity check. This release does not have these yet.</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>No internet connections. Everything it shows and plays is inside the app.</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>No permissions requested for files, screen recording, camera, microphone, contacts or accessibility.</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Only your fish count and voice setting are saved, in the app’s own preferences.</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>No payments, accounts or tracking. The “Give him &#36;5” button charges nothing.</span></li>
+    </ul></div>
+    <div><h3>How to open it</h3><ol class="steps">
+      <li><span>Open the downloaded Fish-All-Day.dmg and drag Fish All Day into Applications.</span></li>
+      <li><span>Open Fish All Day from Applications to see <span class="msg">Apple could not verify “Fish All Day” is free of malware</span>. Click <span class="k">Done</span>, not <span class="k">Move to Trash</span>.</span></li>
+      <li><span>Open <b>System Settings</b> → <b>Privacy &amp; Security</b> and scroll down to <b>Security</b>. Find <span class="msg">“Fish All Day” was blocked to protect your Mac</span>, click <span class="k">Open Anyway</span>, then confirm <span class="k blue">Open Anyway</span> with your password or Touch ID.</span></li>
+      <li><span>Uncle Farter walks onto your Dock. You only do this once; after that, the app opens normally.</span></li>
+    </ol></div>
+    </div>
+    <p class="older">On macOS 13 or 14, right-click the app, choose <b>Open</b>, then click <span class="k">Open</span>.</p>
+    <form method="dialog" class="end">
+      <p>Requires macOS 13 Ventura or later on an Apple silicon Mac (M1 or newer). <a class="again" href="/Fish-All-Day.dmg" download>Download didn't start? Try again</a></p>
+      <button class="btn alt">Close guide</button>
+    </form>
+  </div>
+</dialog>
+<p class="note" id="note">That's Uncle Farter at the bottom of this page.
+  <svg viewBox="0 0 46 58" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 3c-16 10-18 28-8 50"/><path d="M12 44l10 10 9-12"/></svg></p>
+
+<nav class="dock" aria-label="Dock">
+  <a href="/Fish-All-Day.dmg" download data-tip="Download for Mac"><img src="/favicon-192.png" alt="Download Fish All Day for Mac" width="44" height="44"></a>
+  <button class="tile" id="dBook" data-tip="His fish book" aria-label="Open his fish book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v16H5.5c-.8 0-1.5-.7-1.5-1.5v-13ZM13 4h5.5c.8 0 1.5.7 1.5 1.5v13c0 .8-.7 1.5-1.5 1.5H13V4Z"/></svg></button>
+  <button class="tile off" id="dSound" data-tip="Sound: off" aria-label="Turn his sound on" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4v-5Z"/><path class="on" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/><path class="offx" d="m16 9.5 5 5m0-5-5 5"/></svg></button>
+  <a class="tile" href="#install" data-tip="How to install" aria-label="How to install"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.6v.1"/></svg></a>
+  <span class="sep" aria-hidden="true"></span>
+  <button class="back" id="dBack" hidden>Bring him back</button>
+</nav>
+
+<iframe id="man" title="Uncle Farter, live: he walks in and fishes along the bottom of this page" allow="autoplay"></iframe>
+<div class="toast" id="toast" role="status" aria-live="polite"><img src="/favicon-48.png" alt=""><span><b>A bite!</b>Hold the mouse on him to reel it in.</span></div>
+
+<script>
+// him, live, along the bottom of the page: the same page the Mac app shows, framed. He tells us where he is (hit boxes);
+// the mouse passes to him only over those, so the page under the strip stays clickable.
+(() => {
+  const fr = document.getElementById('man'), small = matchMedia('(max-width: 700px)').matches, touch = matchMedia('(pointer: coarse)').matches;
+  const css = getComputedStyle(document.documentElement), dockTop = parseFloat(css.getPropertyValue('--dock-b')) + parseFloat(css.getPropertyValue('--dock-h'));
+  const q = new URLSearchParams({ clear: '', demo: '', mute: '', floor: Math.round(dockTop + 3), ppm: small ? 64 : 118, spot: small ? 0.72 : 0.8 });
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) q.set('seated', '');
+  fr.src = '/desk/desk.html?' + q.toString().replace(/=(&|$)/g, '$1');
+  let hit = [], sound = false, unlocked = false;
+  const win = () => fr.contentWindow, fad = () => win()?.fad;
+  const $ = (id) => document.getElementById(id), toast = $('toast'), count = $('count'), note = $('note');
+  let tt = 0;
+  function placeNote() {           // just left of him and his rod, level with his chest
+    const h = hit[0], r = fr.getBoundingClientRect(); if (!h || h[0] > r.width - 80 || h[3] < 60 || getComputedStyle(note).display === 'none') return;
+    const cx = r.left + h[0] + h[2] * 0.62;                          // above his head, the arrow pointing down at him
+    note.style.right = Math.round(Math.max(12, innerWidth - cx - 130)) + 'px'; note.style.bottom = Math.round(innerHeight - (r.top + h[1]) + 6) + 'px';
+  }
+  addEventListener('message', (e) => {
+    if (e.origin !== location.origin) return; const d = e.data || {};
+    if (d.fad) { try { hit = JSON.parse(d.fad).hit || []; } catch {} placeNote(); }
+    if (d.fadOut && !touch) fr.style.pointerEvents = 'none';
+    const o = d.fadPost; if (!o) return;
+    if (o.shake) { const m = document.querySelector('main'); m.classList.remove('shake'); void m.offsetWidth; m.classList.add('shake'); }
+    if (o.bite === true) { toast.classList.add('on'); count.classList.add('wiggle'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('on'), 4200); }
+    if (o.bite === false) { toast.classList.remove('on'); count.classList.remove('wiggle'); }
+    if (typeof o.today === 'number') $('today').textContent = o.today;
+    if (o.control === 'hide') { $('dBack').hidden = false; fr.style.pointerEvents = 'none'; }
+    if (o.control === 'sound') setSound(!sound, false);
+  });
+  addEventListener('pointermove', (e) => {
+    if (touch) return; const r = fr.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+    fr.style.pointerEvents = hit.some(([hx, hy, w, h]) => x >= hx && x <= hx + w && y >= hy && y <= hy + h) ? 'auto' : 'none';   // we only hear the mouse off the strip, or while he has none of it
+  }, { passive: true });
+  // sound starts off (nobody wants a stranger shouting from a tab); the Dock button turns it on
+  function setSound(on, tell = true) {
+    sound = on; const b = $('dSound'); b.classList.toggle('off', !on); b.setAttribute('aria-pressed', on);
+    b.dataset.tip = on ? 'Sound: on' : 'Sound: off'; b.setAttribute('aria-label', on ? 'Mute him' : 'Turn his sound on');
+    if (tell) { const f = fad(); if (!f) return; if (on && !unlocked) { f.unlock?.(); unlocked = true; } f.state({ sound: on }); f.sound(on); }
+  }
+  $('dSound').addEventListener('click', () => setSound(!sound));
+  $('dBook').addEventListener('click', () => fad()?.book());
+  $('dBack').addEventListener('click', () => { fad()?.hidden(false); $('dBack').hidden = true; });
+  // on a phone the strip never takes the finger (the page must scroll); a touch that starts on him is passed to him
+  if (touch) {
+    let held = false; const at = (t) => { const r = fr.getBoundingClientRect(); return [t.clientX - r.left, t.clientY - r.top]; };
+    const on = (x, y) => !$('dBack').hidden ? false : hit.some(([hx, hy, w, h]) => x >= hx && x <= hx + w && y >= hy && y <= hy + h);
+    const send = (type, x, y) => { const W = win(); if (W) W.dispatchEvent(new W.PointerEvent(type, { bubbles: true, clientX: x, clientY: y, pointerId: 1, pointerType: 'touch', isPrimary: true, button: 0, buttons: type === 'pointerup' ? 0 : 1 })); };
+    document.addEventListener('touchstart', (e) => {
+      const [x, y] = at(e.touches[0]); if (!on(x, y)) return; e.preventDefault();
+      const b = fr.contentDocument?.elementFromPoint(x, y)?.closest('button'); if (b) { b.click(); return; }
+      if (!unlocked && sound) { fad()?.unlock?.(); unlocked = true; } held = true; send('pointerdown', x, y);
+    }, { passive: false });
+    document.addEventListener('touchend', (e) => { if (!held) return; held = false; const [x, y] = at(e.changedTouches[0]); send('pointerup', x, y); });
+    document.addEventListener('touchcancel', () => { if (held) { held = false; send('pointerup', 0, 0); } });
+  }
+  addEventListener('scroll', () => note.classList.toggle('gone', scrollY > innerHeight * 0.6), { passive: true });
+  // every Download button: the download starts as usual and the guide opens over the page
+  const get = $('get');
+  document.querySelectorAll('a.btn.go[href$=".dmg"]').forEach((a) => a.addEventListener('click', () => { if (!get.open) setTimeout(() => get.showModal(), 60); }));
+  get.addEventListener('click', (e) => { if (e.target === get) get.close(); });
+})();
+</script>
+</body>
+</html>

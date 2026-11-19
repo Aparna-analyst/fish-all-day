@@ -1,0 +1,17 @@
+{
+  "name": "toy-lantern",
+  "ref": "/Users/sid/Developer/Personal/desk-fishing-game/design/aholo/oldman-tb/oldman-tb.png",
+  "prompt": "A single old brass camping lantern with a glass chimney and a wire handle, a warm flame inside. Draw it in exactly the same style as the reference picture: soft rounded cartoon clay vinyl-toy shapes, chunky toy proportions, simple matte painted materials, gentle warm colours. Only the object, not the man. The whole object alone, three-quarter front view from slightly above, plain light grey background, soft even studio light, no shadow, no text, no logos, nothing else in the picture.",
+  "taskId": 8259941,
+  "secs": 60,
+  "result": {
+    "taskId": 8259941,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/f98/503/e694ace0d26bb742ff4117f76e334854c314e1db.png"
+      }
+    ]
+  }
+}

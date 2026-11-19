@@ -1,0 +1,166 @@
+[
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/sfx/fart1.mp3",
+  "at": 0.551,
+  "skip": 0,
+  "max": 4.149,
+  "gain": 0.825,
+  "rate": 0.989,
+  "loop": false
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/voice/wlm3ix.mp3",
+  "at": 1.553,
+  "skip": 0.0,
+  "max": 3.247,
+  "gain": 1.0,
+  "rate": 1.0
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/voice/vmf7yk.mp3",
+  "at": 14.766,
+  "skip": 0.0,
+  "max": 6.834,
+  "gain": 1.0,
+  "rate": 1.0
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/sfx/cash.mp3",
+  "at": 19.238,
+  "skip": 0,
+  "max": 2.262,
+  "gain": 0.675,
+  "rate": 1,
+  "loop": false
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/voice/2o4dbl.mp3",
+  "at": 19.24,
+  "skip": 0.0,
+  "max": 2.36,
+  "gain": 1.0,
+  "rate": 1.0
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/sfx/creak.mp3",
+  "at": 21.463,
+  "skip": 0,
+  "max": 3.037,
+  "gain": 0.525,
+  "rate": 1.055,
+  "loop": false
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/sfx/canopen.mp3",
+  "at": 21.464,
+  "skip": 0,
+  "max": 3.036,
+  "gain": 0.75,
+  "rate": 1,
+  "loop": false
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/voice/m9dbx9.mp3",
+  "at": 21.465,
+  "skip": 0.0,
+  "max": 3.135,
+  "gain": 1.0,
+  "rate": 1.0
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/sfx/bell.mp3",
+  "at": 26.093,
+  "skip": 0,
+  "max": 4.007,
+  "gain": 0.825,
+  "rate": 1,
+  "loop": false
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/sfx/reel.mp3",
+  "at": 28.946,
+  "skip": 0,
+  "max": 1.054,
+  "gain": 0.525,
+  "rate": 1,
+  "loop": true
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/sfx/splash.mp3",
+  "at": 29.7,
+  "skip": 0,
+  "max": 0.4,
+  "gain": 0.75,
+  "rate": 1,
+  "loop": false
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/sfx/banjo.mp3",
+  "at": 32.531,
+  "skip": 0,
+  "max": 2.369,
+  "gain": 0.6,
+  "rate": 1,
+  "loop": true
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/voice/iwupdy.mp3",
+  "at": 33.138,
+  "skip": 0.0,
+  "max": 1.862,
+  "gain": 1.0,
+  "rate": 1.0
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/sfx/bigsplash.mp3",
+  "at": 34.752,
+  "skip": 0,
+  "max": 5.448,
+  "gain": 0.9,
+  "rate": 1,
+  "loop": false
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/voice/rt6xtk.mp3",
+  "at": 38.052,
+  "skip": 0.0,
+  "max": 2.248,
+  "gain": 1.0,
+  "rate": 1.0
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/sfx/whoosh.mp3",
+  "at": 45.528,
+  "skip": 0,
+  "max": 4.172,
+  "gain": 0.675,
+  "rate": 1,
+  "loop": false
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/sfx/crack.mp3",
+  "at": 45.955,
+  "skip": 0,
+  "max": 3.745,
+  "gain": 0.9,
+  "rate": 1,
+  "loop": false
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/voice/xl0f6j.mp3",
+  "at": 46.466,
+  "skip": 0.0,
+  "max": 3.334,
+  "gain": 1.0,
+  "rate": 1.0
+ },
+ {
+  "file": "/Users/sid/Developer/Personal/desk-fishing-game/web/public/assets/sfx/creak.mp3",
+  "at": 48.227,
+  "skip": 0,
+  "max": 1.473,
+  "gain": 0.525,
+  "rate": 0.898,
+  "loop": false
+ }
+]

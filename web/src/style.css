@@ -1,0 +1,104 @@
+@import '@fontsource-variable/fraunces';
+@import '@fontsource-variable/nunito';
+
+:root {
+  --bobber: #ff5a36; --ink: #fff8ec; --ink2: #e9dcc6; --wood: #2b1f17; --panel: rgba(28, 22, 17, .72);
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px;
+  --serif: 'Fraunces Variable', Georgia, serif; --sans: 'Nunito Variable', system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #1d2a24; color: var(--ink); font: 15px/1.4 var(--sans);
+  -webkit-user-select: none; user-select: none; touch-action: none; -webkit-tap-highlight-color: transparent; }
+canvas#c { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+button { font: 700 14px/1 var(--sans); color: var(--ink); background: var(--panel); border: 1px solid rgba(255, 248, 236, .18);
+  border-radius: 999px; padding: 9px 14px; cursor: pointer; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+button:hover { border-color: rgba(255, 248, 236, .4); }
+button.main { background: var(--bobber); border-color: var(--bobber); color: #fff; font-size: 17px; padding: 15px 30px;
+  box-shadow: 0 8px 24px rgba(255, 90, 54, .35); }
+
+#hud { position: fixed; inset: 0; pointer-events: none; }
+#hud > * { pointer-events: auto; }
+.count { position: absolute; left: var(--s4); top: var(--s4); display: flex; align-items: baseline; gap: var(--s2);
+  background: var(--panel); border-radius: 14px; padding: 8px 14px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.count b { font: 600 24px/1 var(--serif); }
+.count span { color: var(--ink2); font-size: 13px; }
+.tools { position: absolute; right: var(--s4); top: var(--s4); display: flex; gap: var(--s2); }
+
+.veil { position: fixed; inset: 0; display: grid; place-content: center; justify-items: center; text-align: center; gap: var(--s4);
+  background: radial-gradient(ellipse at 50% 60%, rgba(10, 14, 12, .1), rgba(10, 14, 12, .55)); padding: var(--s5); }
+.veil h1 { margin: 0; font: 600 clamp(44px, 8vw, 84px)/1 var(--serif); letter-spacing: -.01em; text-shadow: 0 4px 30px rgba(0, 0, 0, .45); }
+.veil p { margin: 0 0 var(--s3); font-size: 17px; color: var(--ink2); max-width: 30em; text-shadow: 0 2px 12px rgba(0, 0, 0, .5); }
+
+#bite { position: fixed; left: 50%; bottom: var(--s6); transform: translateX(-50%); width: min(420px, 92vw); display: grid; gap: var(--s3);
+  justify-items: center; background: var(--panel); border: 2px solid var(--bobber); border-radius: 22px; padding: var(--s4) var(--s5) var(--s5);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 0 0 6px rgba(255, 90, 54, .18), 0 18px 50px rgba(0, 0, 0, .4); }
+.biteTitle { font: 700 34px/1 var(--serif); color: var(--bobber); }
+.hold { font-weight: 800; letter-spacing: .04em; color: var(--ink2); }
+.gauge { position: relative; width: 100%; height: 14px; border-radius: 99px; background: rgba(255, 255, 255, .12); overflow: hidden; }
+.gauge .zone { position: absolute; top: 0; bottom: 0; left: 35%; width: 40%; background: rgba(120, 220, 120, .45); }
+.gauge .needle { position: absolute; top: -2px; bottom: -2px; width: 5px; margin-left: -2px; left: 50%; border-radius: 3px; background: #fff; box-shadow: 0 0 8px #fff; }
+.land { width: 100%; height: 6px; border-radius: 99px; background: rgba(255, 255, 255, .1); overflow: hidden; }
+.land i { display: block; height: 100%; width: 0; background: var(--ink); }
+.clock { font: 600 13px var(--sans); color: var(--ink2); min-height: 1em; }
+
+#card { position: fixed; right: var(--s6); top: 50%; transform: translateY(-50%); width: min(300px, 80vw); background: #fbf3e4; color: #2b1f17;
+  border-radius: 18px; padding: var(--s5); box-shadow: 0 24px 60px rgba(0, 0, 0, .35); text-align: center; }
+#card h2 { margin: var(--s2) 0 var(--s1); font: 600 28px/1.1 var(--serif); }
+#card .rar { display: inline-block; font: 800 11px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; padding: 6px 10px; border-radius: 99px; background: #2b1f17; color: #fbf3e4; }
+#card .w { color: #6b5a48; margin: 0 0 var(--s4); }
+#card .new { color: var(--bobber); font-weight: 800; }
+
+#toast { position: fixed; left: 50%; top: var(--s5); transform: translateX(-50%); background: var(--panel); border-radius: 99px; padding: 10px 18px;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); font-weight: 700; }
+
+@media (max-width: 560px) { #card { right: 50%; transform: translate(50%, -50%); } .count b { font-size: 20px; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* Fishing controls stay clear of the view and book buttons. */
+#hud { z-index: 30; }
+#start { z-index: 35; }
+#bite, #card { z-index: 20; }
+#bite { cursor: pointer; touch-action: none; }
+#bite .reelControl { padding: 9px 20px; background: rgba(255, 248, 236, .09); letter-spacing: 0; min-height: 40px; }
+#bite.holding .reelControl { background: rgba(120, 220, 120, .22); }
+#bite.danger { border-color: #ff765f; background: rgba(72, 25, 18, .94); }
+#bite.danger .needle { background: #ff765f; box-shadow: 0 0 8px #ff765f; }
+#bite.slack .land i { background: #f4cd78; }
+#bite .reelHelp { font-size: 12px; color: var(--ink2); text-align: center; }
+#bite:not(.reeling) .clock { font: 700 26px/1 var(--serif); }
+#card #keepFishing { background: #2f6b5a; color: #fff8ec; min-height: 44px; margin-top: 8px; }
+#card .new { margin: 6px 0; }
+#card[data-rarity="legendary"] .rar { background: #86600a; }
+#card[data-rarity="rare"] .rar { background: #654482; }
+#toast { z-index: 50; top: 76px; width: max-content; max-width: calc(100vw - 32px); text-align: center; pointer-events: none; }
+
+.fishShape { --fish-colour: #c9b23a; display: block; position: relative; width: 58px; height: 30px; border-radius: 55% 48% 48% 55%; background: var(--fish-colour); margin: 10px auto 16px; }
+.fishShape::before { content: ''; position: absolute; right: -13px; top: 3px; width: 20px; height: 24px; background: var(--fish-colour); clip-path: polygon(0 50%, 100% 0, 100% 100%); }
+.fishShape::after { content: ''; position: absolute; width: 5px; height: 5px; left: 11px; top: 9px; border-radius: 50%; background: #19221c; box-shadow: 0 0 0 2px rgba(255, 255, 255, .5); }
+.fishShape.cardFish { margin-top: 23px; }
+#book { z-index: 40; padding: 18px; background: rgba(10, 18, 14, .78); }
+.bookPanel { width: min(760px, calc(100vw - 36px)); max-height: calc(100dvh - 36px); min-height: 0; display: flex; flex-direction: column; text-align: left; background: #253c31; border: 1px solid rgba(255, 248, 236, .18); border-radius: 22px; box-shadow: 0 24px 60px rgba(0, 0, 0, .35); overflow: hidden; }
+.bookHeader { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 22px; }
+.bookHeader h2 { margin: 0; font: 600 clamp(24px, 5vw, 34px)/1.1 var(--serif); }
+.bookHeader #bookTotals { grid-column: 1 / -1; max-width: none; margin: 0; font-size: 13px; text-shadow: none; }
+#closeBook { min-height: 44px; }
+#bookScroll { min-height: 0; overflow-y: auto; overscroll-behavior: contain; touch-action: none; scrollbar-color: #6c8b77 #253c31; }
+#bookGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding: 0 22px 22px; }
+.bookEntry { min-width: 0; padding: 16px 10px; border-radius: 14px; text-align: center; background: rgba(255, 248, 236, .065); }
+.bookEntry h3 { margin: 0 0 5px; font: 700 16px/1.2 var(--sans); overflow-wrap: anywhere; }
+.bookRarity { font-size: 11px; color: #d8c3a3; text-transform: uppercase; letter-spacing: .06em; }
+#book .bookEntry p { margin: 8px 0 0; font-size: 12px; text-shadow: none; }
+.bookEntry.uncaught { color: #c0c7bf; }
+.uncaught .fishShape::after { display: none; }
+#book button:focus-visible, #bite button:focus-visible, #card button:focus-visible { outline: 3px solid #f4cd78; outline-offset: 3px; }
+@media (max-width: 560px) {
+  #bookGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 0 12px 12px; }
+  .bookHeader { padding: 16px 12px; }
+  #bite { bottom: max(16px, env(safe-area-inset-bottom)); gap: 9px; padding: 16px; }
+}
+@media (max-height: 480px) {
+  #bite { bottom: 12px; gap: 6px; padding: 12px 18px; }
+  #bite .biteTitle { font-size: 26px; }
+  #card { max-height: calc(100dvh - 144px); overflow-y: auto; }
+}

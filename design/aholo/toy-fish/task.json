@@ -1,0 +1,17 @@
+{
+  "name": "toy-fish",
+  "ref": "design/aholo/toy-cooler/toy-cooler.png",
+  "prompt": "A single cute cartoon fish seen from the side, facing right, plump round body, silvery white with a soft pale grey back, one big friendly eye with a shine, small rounded fins and a short forked tail, mouth closed in a little smile. Draw it in exactly the same style as the reference picture: soft rounded cartoon clay vinyl-toy shapes, chunky toy proportions, simple matte painted materials. Only the fish. The whole fish alone, plain light grey background, soft even studio light, no shadow, no water, no text, no logos, nothing else in the picture.",
+  "taskId": 8260912,
+  "secs": 68,
+  "result": {
+    "taskId": 8260912,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/c8e/f0c/1cf7d1dd7848b5a8dbcfae9656b8dce82ededdc.png"
+      }
+    ]
+  }
+}

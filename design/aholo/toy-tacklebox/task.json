@@ -1,0 +1,17 @@
+{
+  "name": "toy-tacklebox",
+  "ref": "/Users/sid/Developer/Personal/desk-fishing-game/design/aholo/oldman-tb/oldman-tb.png",
+  "prompt": "A single wooden tackle box, closed, with a brass clasp and a leather carry handle, faded green paint. Draw it in exactly the same style as the reference picture: soft rounded cartoon clay vinyl-toy shapes, chunky toy proportions, simple matte painted materials, gentle warm colours. Only the object, not the man. The whole object alone, three-quarter front view from slightly above, plain light grey background, soft even studio light, no shadow, no text, no logos, nothing else in the picture.",
+  "taskId": 8259948,
+  "secs": 62,
+  "result": {
+    "taskId": 8259948,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/dba/b4f/f0c37f4798d0a4a9781959a8b1c17ee7a9154c97.png"
+      }
+    ]
+  }
+}

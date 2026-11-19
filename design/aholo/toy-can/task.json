@@ -1,0 +1,17 @@
+{
+  "name": "toy-can",
+  "ref": "/Users/sid/Developer/Personal/desk-fishing-game/design/aholo/oldman-tb/oldman-tb.png",
+  "prompt": "A single drink can standing upright, plain green and silver with no label, no letters and no logo. Draw it in exactly the same style as the reference picture: soft rounded cartoon clay vinyl-toy shapes, chunky toy proportions, simple matte painted materials, gentle warm colours. Only the object, not the man. The whole object alone, three-quarter front view from slightly above, plain light grey background, soft even studio light, no shadow, no text, no logos, nothing else in the picture.",
+  "taskId": 8259966,
+  "secs": 43,
+  "result": {
+    "taskId": 8259966,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/a9f/d51/1126a6227380ae939f96fd7b4b46e66e2cf3837.png"
+      }
+    ]
+  }
+}

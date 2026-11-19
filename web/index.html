@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <title>Fish All Day</title>
+  <meta name="description" content="A cartoon old man fishes all day in a corner of your screen. When a fish bites, you have ten seconds to reel it in.">
+  <meta name="theme-color" content="#1d2a24">
+  <link rel="icon" id="favicon" href="data:,">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <canvas id="c"></canvas>
+
+  <div id="hud" hidden>
+    <div class="count"><b id="nToday">0</b><span>fish today</span></div>
+    <div class="tools">
+      <button id="bBook" title="Fish book">Fish book</button>
+      <button id="bCam" title="Change the view">View</button>
+      <button id="bPip" title="Keep him in a small window in the corner of your screen" hidden>Pop out</button>
+    </div>
+  </div>
+
+  <div id="start" class="veil">
+    <h1>Fish All Day</h1>
+    <p>He fishes. You work. When something bites, you have ten seconds.</p>
+    <button id="bGo" class="main">Go fishing</button>
+  </div>
+
+  <div id="bite" hidden>
+    <div class="biteTitle">Bite!</div>
+    <button type="button" class="hold reelControl" id="hold" aria-describedby="reelHelp">Hold to reel</button>
+    <div class="gauge"><i class="zone"></i><i class="needle" id="needle"></i></div>
+    <div class="land"><i id="landBar"></i></div>
+    <div class="clock" id="biteClock"></div>
+    <div class="reelHelp" id="reelHelp">Hold here or hold Space. Let go to ease the line.</div>
+  </div>
+
+  <div id="card" hidden>
+    <div role="status" aria-live="polite">
+      <span class="rar" id="cardRarity"></span>
+      <span class="fishShape cardFish" id="cardFish" aria-hidden="true"></span>
+      <h2 id="cardName"></h2>
+      <p class="w" id="cardWeight"></p>
+      <p class="new" id="cardNew" hidden>New in your fish book!</p>
+      <p class="new" id="cardBest" hidden>Biggest yet!</p>
+    </div>
+    <button type="button" id="keepFishing">Keep fishing</button>
+  </div>
+  <div id="book" class="veil" hidden>
+    <section class="bookPanel" role="dialog" aria-modal="true" aria-labelledby="bookTitle" aria-describedby="bookTotals">
+      <header class="bookHeader">
+        <h2 id="bookTitle">Your fish book</h2>
+        <button type="button" id="closeBook">Close</button>
+        <p id="bookTotals"></p>
+      </header>
+      <div id="bookScroll"><div id="bookGrid"></div></div>
+    </section>
+  </div>
+  <div id="toast" hidden><span id="toastMessage" role="status" aria-live="polite"></span></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "redraw-face",
+  "ref": "/Users/sid/Developer/Personal/desk-fishing-game/models/oldman/polish/face-before.png",
+  "prompt": "Redraw this exact picture as a cleaner, sharper, cuter version of the same cartoon toy. Keep everything exactly where it is: the same face, the same size and position of the eyes, eyebrows, nose, cheeks, mouth, moustache, beard, ears and hat brim, the same framing and the same plain grey background. Make it look like a premium cartoon figure: big glossy dark brown eyes with a crisp white highlight in each eye, neat white eyebrows, smooth rosy skin with a soft blush on the cheeks and the round nose, a warm friendly smile, a soft fluffy white beard and moustache with clean gentle strands, no smears, no blur, no stray marks. Flat even light with no shadows, exactly like the original picture. No text.",
+  "taskId": 8260075,
+  "secs": 54,
+  "result": {
+    "taskId": 8260075,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/894/95d/400ba9e0e9a3fd1e687a9f6f01f07f66ec154706.png"
+      }
+    ]
+  }
+}

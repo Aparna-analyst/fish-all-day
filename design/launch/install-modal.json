@@ -1,0 +1,22 @@
+{
+  "title": "Opening Fish All Day",
+  "lead": "Your download has started. This hackathon release is signed but not yet notarised by Apple, so a macOS warning on first launch is expected.",
+  "safe_title": "Safe to use",
+  "safe": [
+    "Notarisation requires a paid Apple Developer account and an identity check. This release does not have these yet.",
+    "No internet connections. Everything it shows and plays is inside the app.",
+    "No permissions requested for files, screen recording, camera, microphone, contacts or accessibility.",
+    "Only your fish count and voice setting are saved, in the app’s own preferences.",
+    "No payments, accounts or tracking. The “Give him $5” button charges nothing."
+  ],
+  "steps_title": "How to open it",
+  "steps": [
+    "Open the downloaded Fish-All-Day.dmg and drag Fish All Day into Applications.",
+    "Open Fish All Day from Applications to see \"Apple could not verify “Fish All Day” is free of malware\". Click \"Done\", not \"Move to Trash\".",
+    "Open \"System Settings\" → \"Privacy & Security\" and scroll down to \"Security\". Find \"“Fish All Day” was blocked to protect your Mac\", click \"Open Anyway\", then confirm \"Open Anyway\" with your password or Touch ID.",
+    "Uncle Farter walks onto your Dock. You only do this once; after that, the app opens normally."
+  ],
+  "older": "On macOS 13 or 14, right-click the app, choose \"Open\", then click \"Open\".",
+  "close": "Close guide",
+  "foot": "Requires macOS 13 Ventura or later on an Apple silicon Mac (M1 or newer)."
+}

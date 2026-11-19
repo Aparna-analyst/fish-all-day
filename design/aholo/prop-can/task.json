@@ -1,0 +1,17 @@
+{
+  "name": "prop-can",
+  "ref": "-",
+  "prompt": "A single cartoon drink can standing upright, plain green and silver with no label, no letters and no logo, a little dented. Soft matte clay vinyl-toy style, chunky and cute, matching a cosy cartoon fishing game. The whole object alone, seen from a three-quarter front view slightly above, plain light grey background, soft even studio light, no shadow, no text, no logos, nothing else in the picture.",
+  "taskId": 8259866,
+  "secs": 39,
+  "result": {
+    "taskId": 8259866,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/ca3/b23/63d850ee456aa8ca4f960aaa99e56c7a4d102184.png"
+      }
+    ]
+  }
+}

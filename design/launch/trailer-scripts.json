@@ -1,0 +1,302 @@
+{
+  "A": {
+    "title": "The Man. The Myth. The Dock.",
+    "logline": "An utterly serious trailer narrator announces an epic new arrival on your Mac. Uncle Farter settles in, spends pretend money on beer and briefly catches something other than trouble.",
+    "beats": [
+      {
+        "t": 0,
+        "dur": 4.5,
+        "shot": "Walk-in moment. Open on the real Mac desktop, code editor open and Dock visible. Uncle Farter walks in from the side onto the Dock. Push into the recording just enough to see his olive bucket hat and fishing vest, keeping the editor and Dock in frame.",
+        "caption": "A free Mac app. One uncle.",
+        "voice": "narrator: \"In a world obsessed with productivity...\"",
+        "sfx": "One deep cinematic impact on his first step onto the Dock.",
+        "music": "Low orchestral strings build with absurd seriousness; duck beneath the deep, unhurried narrator."
+      },
+      {
+        "t": 4.5,
+        "dur": 2.5,
+        "shot": "Arrival continues. Use clean jump cuts of the actual chair unfolding, him sitting and his line casting off the Dock. Keep the line visible.",
+        "caption": "Uncle Farter",
+        "voice": "narrator: \"...one uncle has clocked out.\"",
+        "sfx": "The camping chair creaks as he sits.",
+        "music": "French horns give his retirement a heroic theme."
+      },
+      {
+        "t": 7,
+        "dur": 4,
+        "shot": "Empty-cooler and money-request moment. Cut from his hand finding no beer to him standing with his real speech bubble and Give him $5 button. Play the askMoney line only once he is asking. Leave the button readable.",
+        "caption": "His first catch: your pretend $5.",
+        "voice": "askMoney: \"Sponsor a thirsty legend, kid.\"",
+        "sfx": "The empty cooler lid gives a hollow clunk.",
+        "music": "The orchestra cuts dead when the empty cooler is revealed; his request lands in silence."
+      },
+      {
+        "t": 11,
+        "dur": 3,
+        "shot": "Beer-run moment. Show the real cursor clicking Give him $5, then jump cut between his jog off screen, return with the can and opening it. Use actual recorded actions at normal speed, trimming the travel between them.",
+        "caption": "Beer first.",
+        "voice": "",
+        "sfx": "The can opens with a crisp psst.",
+        "music": "Urgent action-trailer strings turn the beer run into a rescue mission."
+      },
+      {
+        "t": 14,
+        "dur": 1.5,
+        "shot": "Beer moment continues. Tight crop of his sip, followed by the actual burp. Leave a little Dock visible beneath his chair.",
+        "caption": "",
+        "voice": "",
+        "sfx": "One satisfied burp.",
+        "music": "A swelling heroic chord stops just before the burp."
+      },
+      {
+        "t": 15.5,
+        "dur": 4,
+        "shot": "Fart moment. Hold on his chair as the green puff appears. Start his recorded blame line about 0.5 seconds into the beat, with its real speech bubble visible.",
+        "caption": "",
+        "voice": "fart: \"Excuse you. The fish have noses.\"",
+        "sfx": "One sputtering cartoon fart.",
+        "music": "Silence for the puff and the entire accusation."
+      },
+      {
+        "t": 19.5,
+        "dur": 4,
+        "shot": "Doze-and-wake moment. Show him asleep while the editor remains open. After one snore, the real cursor clicks him; he wakes and delivers his wake line. Start the voice by one second into the beat.",
+        "caption": "Your new supervisor.",
+        "voice": "wake: \"You interrupted important nothing.\"",
+        "sfx": "One nasal snore, cut off when he wakes.",
+        "music": "A solemn string note returns very quietly, then ducks for his complaint."
+      },
+      {
+        "t": 23.5,
+        "dur": 3,
+        "shot": "Fish-bite and reeling moment. Show the real exclamation mark and toast, then the cursor grabbing him and holding the mouse to reel. Keep the app's actual reel feedback visible.",
+        "caption": "Grab him. Hold to reel.",
+        "voice": "narrator: \"When duty calls...\"",
+        "sfx": "The app's bite bell rings once.",
+        "music": "Full orchestral pulse returns, building towards a glorious catch."
+      },
+      {
+        "t": 26.5,
+        "dur": 4,
+        "shot": "Successful-catch moment. Enter on the fish landing, then hold his little victory dance. Begin caughtFish within 0.4 seconds. Finish with a brief crop of the real menu-bar fish count for today, using the same successful catch's recording.",
+        "caption": "",
+        "voice": "caughtFish: \"Remember this. I was briefly useful.\"",
+        "sfx": "The landed fish makes one wet plop.",
+        "music": "The orchestra gives way to his jaunty banjo victory tune, ducked beneath his line."
+      },
+      {
+        "t": 30.5,
+        "dur": 2.5,
+        "shot": "Big-fish loss from a separate encounter. Enter with the line already taut; the fish drags him off the Dock into the water. Time the splash just after the narrator finishes. End on the splash, without a recovery shot or pulledIn dialogue.",
+        "caption": "",
+        "voice": "narrator: \"...he rises to the occasion.\"",
+        "sfx": "One enormous water splash.",
+        "music": "The heroic brass theme returns, then cuts off at the splash."
+      },
+      {
+        "t": 33,
+        "dur": 4,
+        "shot": "Aholo beat. Match the concept picture to the actual Lux3D model, reveal its real rig, then play one existing character move. Allow roughly one second for each stage. Keep the credit caption fixed throughout.",
+        "caption": "Modelled, rigged and animated with Aholo Lux3D",
+        "voice": "narrator: \"Modelled, rigged and animated with Aholo Lux3D.\"",
+        "sfx": "One metallic chime as the concept becomes the model.",
+        "music": "A restrained orchestral chord supports the making-of credit; keep every word clear."
+      },
+      {
+        "t": 37,
+        "dur": 2.5,
+        "shot": "Title card. Large, still cream lettering on black. First half of the uncle tagline, filling the central safe area.",
+        "caption": "The most useless uncle",
+        "voice": "narrator: \"The most useless uncle...\"",
+        "sfx": "One low trailer boom on the cut.",
+        "music": "The heroic theme slows into an extravagant final declaration."
+      },
+      {
+        "t": 39.5,
+        "dur": 2.5,
+        "shot": "Title card. Replace the first card with the second half of the same sentence. Match its typography and position; no other words appear.",
+        "caption": "in your Mac family",
+        "voice": "narrator: \"...in your Mac family.\"",
+        "sfx": "One second low trailer boom on the cut.",
+        "music": "Hold the grand final chord, then leave a breath before the next cut."
+      },
+      {
+        "t": 42,
+        "dur": 4,
+        "shot": "Worked-too-long stone moment. Cut back to the actual desktop as he throws the stone and the app's crack visual effect spreads over the editor. Start the stone line just after impact, within the first second. Keep him visible below the cracked-screen effect.",
+        "caption": "Wild manners. Proudly useless.",
+        "voice": "stone: \"Boss, that's my rock of concern.\"",
+        "sfx": "One sharp glass-crack sound on the visual impact.",
+        "music": "Cut the orchestra at impact; let his explanation play dry."
+      },
+      {
+        "t": 46,
+        "dur": 4,
+        "shot": "End card. Hold all three lines still for the full four seconds, with the product name largest and the URL clearly legible.",
+        "caption": "Fish All Day\nFree for Mac\nfishallday.pages.dev",
+        "voice": "narrator: \"Fish All Day. Free for Mac.\"",
+        "sfx": "One small fishing-bobber plop on the card's entrance.",
+        "music": "An oversized orchestral finale resolves, leaving the last half-second quiet."
+      }
+    ]
+  },
+  "B": {
+    "title": "A Sporting Gentleman",
+    "logline": "A 1930s cartoon introduces your new Dock resident with grand title cards. His beer bill, wind and disastrous sporting career do the talking, with no narrator to defend him.",
+    "beats": [
+      {
+        "t": 0,
+        "dur": 4,
+        "shot": "Cold open on the fart moment in the real Mac app. Keep the code editor and Dock recognisable as the green puff appears. Start his recorded accusation about 0.5 seconds in and show its real bubble.",
+        "caption": "A free Mac app. With wind.",
+        "voice": "fart: \"Excuse you. The fish have noses.\"",
+        "sfx": "One sputtering cartoon fart.",
+        "music": "A bright hot-jazz opening chord cuts dead for the fart and his accusation."
+      },
+      {
+        "t": 4,
+        "dur": 2,
+        "shot": "1930s cartoon title card. Large cream lettering, black field and a simple scalloped border. Hold the words perfectly still.",
+        "caption": "Introducing Uncle Farter",
+        "voice": "",
+        "sfx": "One slide-whistle flourish on the card's entrance.",
+        "music": "Stride piano and muted trumpet burst into a cheerful two-step."
+      },
+      {
+        "t": 6,
+        "dur": 4,
+        "shot": "Walk-in and arrival moment, starting a fresh vignette. Show his olive bucket hat and fishing vest as he enters from the side. Jump cut through the real chair unfolding, sitting and casting off the Dock, with the code editor still visible above him.",
+        "caption": "He lives on your Mac's Dock.",
+        "voice": "",
+        "sfx": "The camping chair creaks as he sits.",
+        "music": "Clarinet takes the jaunty melody; piano accents the existing movements."
+      },
+      {
+        "t": 10,
+        "dur": 2,
+        "shot": "1930s cartoon title card. First half of the uncle tagline in oversized, still lettering.",
+        "caption": "The most useless uncle",
+        "voice": "",
+        "sfx": "One woodblock knock on the cut.",
+        "music": "The band plays an expectant ascending phrase."
+      },
+      {
+        "t": 12,
+        "dur": 2,
+        "shot": "Matching title card. Replace the first half with the second half of the same sentence, keeping the type and border fixed.",
+        "caption": "in your Mac family",
+        "voice": "",
+        "sfx": "One triangle ping on the cut.",
+        "music": "Muted trumpet gives the introduction a proudly pompous finish."
+      },
+      {
+        "t": 14,
+        "dur": 4,
+        "shot": "Empty-cooler and money-request moment. Cut from his unsuccessful reach into the cooler to him standing and asking for money. Start askMoney only when its real bubble and Give him $5 button appear.",
+        "caption": "Pretend money. Real cheek.",
+        "voice": "askMoney: \"Sponsor a thirsty legend, kid.\"",
+        "sfx": "The empty cooler lid gives a hollow clunk.",
+        "music": "The band stops; a quiet plucked double bass keeps time beneath the request."
+      },
+      {
+        "t": 18,
+        "dur": 3,
+        "shot": "Beer-run moment. The real cursor clicks Give him $5. Jump cut through his jog out, return with the can and can opening. Trim travel, keeping each selected action at normal speed.",
+        "caption": "",
+        "voice": "",
+        "sfx": "The can opens with a crisp psst.",
+        "music": "Stride piano races through a short comic chase phrase."
+      },
+      {
+        "t": 21,
+        "dur": 1.5,
+        "shot": "Beer moment continues. Cut close for his sip and actual burp, with the edge of the Dock still visible.",
+        "caption": "",
+        "voice": "",
+        "sfx": "One satisfied burp.",
+        "music": "The band stops just before the burp, leaving room for the joke."
+      },
+      {
+        "t": 22.5,
+        "dur": 1.5,
+        "shot": "1930s cartoon title card. A grand sporting introduction in three large, still words.",
+        "caption": "A sporting gentleman!",
+        "voice": "",
+        "sfx": "One referee's whistle blast.",
+        "music": "Trumpet announces a ridiculously grand sporting fanfare."
+      },
+      {
+        "t": 24,
+        "dur": 3,
+        "shot": "Fish-bite and reeling moment. Show the actual exclamation mark and toast, then the cursor grabbing him and holding the mouse. Keep the real reel feedback legible.",
+        "caption": "Grab him. Hold to reel.",
+        "voice": "",
+        "sfx": "The app's bite bell rings once.",
+        "music": "The two-step quickens into a playful chase, building towards the catch."
+      },
+      {
+        "t": 27,
+        "dur": 3.5,
+        "shot": "Successful-catch moment. Enter on the fish landing, then show his little dance. Start caughtFish within 0.4 seconds. End with a brief crop of today's real menu-bar fish count from this catch.",
+        "caption": "",
+        "voice": "caughtFish: \"Watch, kid. This belly can dance.\"",
+        "sfx": "The landed fish makes one wet plop.",
+        "music": "His banjo victory tune takes over, tucked beneath his boast."
+      },
+      {
+        "t": 30.5,
+        "dur": 2.5,
+        "shot": "Big-fish loss from another encounter. Start with the taut line; the big fish pulls him off the Dock into the water. Hold the real splash as the sporting title's punchline. No recovery shot or pulledIn dialogue.",
+        "caption": "The fish disagrees.",
+        "voice": "",
+        "sfx": "One enormous water splash.",
+        "music": "A descending trombone phrase follows the pull; the band stops on the splash."
+      },
+      {
+        "t": 33,
+        "dur": 4,
+        "shot": "Aholo beat, framed like a cartoon studio credit. Show the concept picture, actual Lux3D model, actual rig and one existing character move, roughly one second each. The seven-word credit stays fixed throughout.",
+        "caption": "Modelled, rigged and animated with Aholo Lux3D",
+        "voice": "",
+        "sfx": "One bright bell chime as the concept becomes the model.",
+        "music": "A warm clarinet phrase gives the craft credit a clear, unhurried four seconds."
+      },
+      {
+        "t": 37,
+        "dur": 2,
+        "shot": "1930s cartoon title card. Use the same cream lettering and scalloped border. Hold still to set up the final desktop gag.",
+        "caption": "Your break. His idea.",
+        "voice": "",
+        "sfx": "One mechanical alarm-clock ring.",
+        "music": "Piano winds up a short, mischievous phrase, then hangs on an unresolved chord."
+      },
+      {
+        "t": 39,
+        "dur": 4,
+        "shot": "Worked-too-long stone moment. Show the real throw and the app's crack visual effect over the code editor. Start his stone line just after impact, within the first second. Keep his real bubble readable.",
+        "caption": "",
+        "voice": "stone: \"Boss, that's my rock of concern.\"",
+        "sfx": "One sharp glass-crack sound on the visual impact.",
+        "music": "The band cuts out on impact; his explanation lands in silence."
+      },
+      {
+        "t": 43,
+        "dur": 3,
+        "shot": "1930s cartoon title card. The full four-word tagline holds large and perfectly still.",
+        "caption": "Wild manners. Proudly useless.",
+        "voice": "",
+        "sfx": "One rubber-horn honk on the cut.",
+        "music": "The whole jazz band returns for a cheeky final refrain."
+      },
+      {
+        "t": 46,
+        "dur": 4,
+        "shot": "End card in the same cartoon style. Hold all three lines still for the full four seconds, with the product name largest and the URL clearly legible.",
+        "caption": "Fish All Day\nFree for Mac\nfishallday.pages.dev",
+        "voice": "",
+        "sfx": "One small fishing-bobber plop on the card's entrance.",
+        "music": "The band lands a crisp final button, leaving the last half-second quiet."
+      }
+    ]
+  }
+}

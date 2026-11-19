@@ -1,0 +1,17 @@
+{
+  "name": "oldman-a",
+  "ref": "/Users/sid/Developer/Personal/desk-fishing-game/design/refs/oldman-catch.jpg",
+  "prompt": "The same cartoon old fisherman as in the reference picture, with exactly his face and clothes: a stout round-bellied grandpa with a big white bushy beard, rosy cheeks and a round nose, a faded olive bucket hat with two small fishing lures pinned to it, an olive fishing vest with pockets over a faded red checked shirt, brown trousers rolled up at the ankle, green rubber boots. Soft matte clay vinyl-toy style with toy proportions. Full body from hat to boots, standing straight, seen from the front, arms held down and slightly away from the body in a relaxed A pose, hands open and empty, feet a little apart, looking straight ahead with a calm friendly smile. Nothing in his hands. Plain light grey background, soft even studio light, no shadow on the ground, nothing else in the picture.",
+  "taskId": 8259778,
+  "secs": 52,
+  "result": {
+    "taskId": 8259778,
+    "bizId": "LUX_3D",
+    "status": 3,
+    "outputs": [
+      {
+        "content": "https://qhmtl-cos.kujiale.com/materialtexture/58d/c0f/bcf6c3c8c555660be6c7226ae4439b3fe410f1c4.png"
+      }
+    ]
+  }
+}
